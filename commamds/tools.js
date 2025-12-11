@@ -744,3 +744,38 @@ MTRK({
     return await m.sendErr(e)
   }
 })
+module.exports = {
+    cmd: "support",
+    desc: "Official MT-RK community and support information",
+    fromMe: false,
+    type: "info",
+
+    async handler(m, { conn }) {
+        try {
+
+            const text = `
+彡─✦『 🛡️ MT-RK OFFICIAL SUPPORT 』✦─彡
+
+OWNER:
+• +27675859928
+  – Official MT-RK owner and project head.
+
+COMMUNITY (Main):
+https://chat.whatsapp.com/C87PG6qBbYFBybNauJQeUa
+
+If the main community link does not work, try joining using the group link below:
+
+COMMUNITY (Backup Join Link):
+https://chat.whatsapp.com/J0cmSfcWju1BSD9hIPJ8LT?mode=hqrc
+
+彡──────────────────────彡
+For updates, help, bug reports, and announcements, join the official community.
+            `;
+
+            await conn.sendMessage(m.chat, { text }, { quoted: m });
+
+        } catch (e) {
+            await conn.sendMessage(m.chat, { text: "Failed to load support information." }, { quoted: m });
+        }
+    }
+};
