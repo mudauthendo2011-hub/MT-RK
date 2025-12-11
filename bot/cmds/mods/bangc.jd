@@ -1,0 +1,54 @@
+const fs = require("fs");
+const path = require("path");
+
+// Path to mods database
+const dbPath = path.join(__dirname, "../../database/mods.json");
+
+// Load database
+function loadDB() {
+    if (!fs.existsSync(dbPath)) {
+        return { mods: [], bannedGroups: [], bannedUsers: [] };
+    }
+    return JSON.parse(fs.readFileSync(dbPath));
+}
+
+// Save database
+function saveDB(db) {
+    fs.writeFileSync(dbPath, JSON.stringify(db, null, 2));
+}
+
+module.exports = {
+    name: "bangc",
+    description: "Ban a group from using the bot",
+    category: "mods",
+
+    execute: async (sock, msg, args, { isGroup, isMod, sender, from }) => {
+
+        if (!isGroup) {
+            return await sock.sendMessage(from, { text: "This command only works in groups." });
+        }
+
+        // Check mod permission
+        if (!isMod) {
+            return await sock.sendMessage(from, { text: "You are not allowed to use this command." });
+        }
+
+        const db = loadDB();
+
+        // If group already banned
+        if (db.bannedGroups.includes(from)) {
+            return await sock.sendMessage(from, { text: "This group is already banned from using the bot." });
+        }
+
+        // Add group to ban list
+        db.bannedGroups.push(from);
+        saveDB(db);
+
+        await sock.sendMessage(from, {
+            text:
+                "Group has been *banned from using the bot*.\n\n" +
+                "The bot will no longer respond here until an unban."
+        });
+    }
+};
+
