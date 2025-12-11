@@ -469,32 +469,46 @@ if (text.trim().toLowerCase() === 'admins') {
 
 
 MTRK({
-cmd: "getsudo|allsudo",
-  desc: "get all sudos",
+  cmd: "guards|protecters",
+  desc: "get all guards",
   fromMe: wtype,
   type: "config",
 }, async (m, text) => {
   try {
-    var sudo = (config().SUDO || "")
-    .split(",")
-    .map(n => n.trim())
-    .filter(n => n)
-    if (sudo.length == 0) return await m.send("_Sudo list is empty_")
-    var msg = "「 SUDO LIST 」\n"
-    var mj = []
-    for (var s of sudo) {
-    var jid = s.trim() + '@s.whatsapp.net'
-    msg += `❑ @${s}\n`
-    mj.push(jid)
-    }
-    var fmsg = `\`\`\`${msg}\`\`\``
-    return await m.send(fmsg, {mentions: mj
-})
+    // Get guards from config
+    var guardList = (config().SUDO || "")
+      .split(",")
+      .map(n => n.trim())
+      .filter(n => n);
+
+    if (guardList.length === 0)
+      return await m.send("_Guard list is empty_");
+
+    // Royal-style message
+    var msg = "╔═════✦❖✦═════╗\n";
+    msg += "   𝗥𝗢𝗬𝗔𝗟 𝗚𝗨𝗔𝗥𝗗𝗦  \n";
+    msg += "╚═════✦❖✦═════╝\n";
+    msg += "     ⟢ 𝗣𝗥𝗢𝗧𝗘𝗖𝗧𝗘𝗥𝗦 ⟢\n";
+    msg += "——————————————\n\n";
+
+    var mentionJids = [];
+    guardList.forEach(guard => {
+      msg += `• @${guard}\n`;
+      mentionJids.push(guard + '@s.whatsapp.net');
+    });
+
+    msg += "\n——————————————\n";
+    msg += ">  ⚠️ Do not tag guards without a valid reason.\n";
+    msg += "Improper use may result in restrictions.";
+
+    // Send message with mentions
+    return await m.send(msg, { mentions: mentionJids });
+
   } catch (e) {
-    console.log("cmd error", e)
-    return await m.sendErr(e)
+    console.log("cmd error", e);
+    return await m.sendErr(e);
   }
-})
+});
 
 MTRK({
   cmd: "setmod|addmod",
@@ -600,34 +614,46 @@ if (text.trim().toLowerCase() === 'admins') {
 })
 
 MTRK({
-cmd: "getmods|getmod|allmods",
+  cmd: "mods",
   desc: "get all mods",
   fromMe: wtype,
   type: "config",
 }, async (m, text) => {
   try {
+    // Get mods from config
     var modList = (config().MODS || "")
-    .split(",")
-    .map(n => n.trim())
-    .filter(n => n)
-    
-    if (modList.length == 0)
-    return await m.send("_Mod list is empty_")
-    var msg = "「 MOD LIST 」\n"
-    var mentionJids = []
-    for (var u of modList) {
-    msg += `❑ @${u}\n`
-    mentionJids.push(u + '@s.whatsapp.net')
-    }
-    var fmsg = `\`\`\`${msg}\`\`\``
-    return await m.send(fmsg, {
-    mentions: mentionJids })
-  } catch (e) {
-    console.log("cmd error", e)
-    return await m.sendErr(e)
-  }
-})
+      .split(",")
+      .map(n => n.trim())
+      .filter(n => n);
 
+    if (modList.length === 0)
+      return await m.send("_Mods list is empty_");
+
+    // Royal-style message
+    var msg = "╔═════✦❖✦═════╗\n";
+    msg += "   𝗥𝗢𝗬𝗔𝗟 𝗦𝗧𝗔𝗙𝗙  \n";
+    msg += "╚═════✦❖✦═════╝\n";
+    msg += "     ⟢ 𝙈𝙊𝘿𝙎 𝙇𝙄𝙎𝙏 ⟢\n";
+    msg += "——————————————\n\n";
+
+    var mentionJids = [];
+    modList.forEach(mod => {
+      msg += `• @${mod}\n`;
+      mentionJids.push(mod + '@s.whatsapp.net');
+    });
+
+    msg += "\n——————————————\n";
+    msg += ">  ⚠️ Please avoid using this command without a valid reason.\n";
+    msg += "Unnecessary tagging of staff may result in a restriction.";
+
+    // Send message with mentions
+    return await m.send(msg, { mentions: mentionJids });
+
+  } catch (e) {
+    console.log("cmd error", e);
+    return await m.sendErr(e);
+  }
+}); 
 
 MTRK({
 cmd: "mode",
