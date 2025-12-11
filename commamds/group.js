@@ -2232,13 +2232,13 @@ MTRK({
 
     // OWNER
     msg += `👑 *Owner*\n`;
-    msg += `• Number: 27675859928\n`;
+    msg += `• Number: +27675859928\n`;
     msg += `• Role: Creator of the MT-RK Bot\n`;
     msg += `• DM for: Bot info, permissions, features\n\n`;
 
     // CEO
     msg += `💼 *CEO*\n`;
-    msg += `• Number: 22891733300\n`;
+    msg += `• Number: +22891733300\n`;
     msg += `• Role: CEO of MT-RK\n`;
     msg += `• DM for: Business, decisions, administrative issues\n\n`;
 
@@ -2249,8 +2249,8 @@ MTRK({
     msg += `• DM them for: Help, bug reports, moderation problems\n\n`;
 
     msg += `════════════════════════════\n`;
-    msg += `⚠️ Only DM staff for *real problems*.\n`;
-    msg += `Spamming staff may get you blocked.\n`;
+    msg += `> ⚠️ Only DM staff for *real problems*.\n`;
+    msg += `> Spamming staff may get you blocked.\n`;
     msg += `════════════════════════════\n\n`;
 
     msg += `🗡️ Developers: Luffy & Mudau Thendo\n`;
