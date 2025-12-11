@@ -769,7 +769,7 @@ COMMUNITY (Backup Join Link):
 https://chat.whatsapp.com/J0cmSfcWju1BSD9hIPJ8LT?mode=hqrc
 
 彡──────────────────────彡
-For updates, help, bug reports, and announcements, join the official community.
+> For updates, help, bug reports, and announcements, join the official community.
             `;
 
             await conn.sendMessage(m.chat, { text }, { quoted: m });
