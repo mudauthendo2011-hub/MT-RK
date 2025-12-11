@@ -48,10 +48,10 @@ MTRK({
 
 
 MTRK({
-        cmd: "archive",
-        desc: "archive a chat",
-        fromMe: true,
-        type: "user",
+	cmd: "archive",
+    desc: "archive a chat",
+    fromMe: true,
+    type: "user",
 }, async (m, text) => {
   try {
     const lmsg = {
@@ -70,10 +70,10 @@ MTRK({
 })
 
 MTRK({
-        cmd: "unarchive",
-        desc: "unarchive a chat",
-        fromMe: true,
-        type: "user",
+    cmd: "unarchive",
+    desc: "unarchive a chat",
+    fromMe: true,
+    type: "user",
 }, async (m, text) => {
   try {
     const lmsg = {
@@ -93,10 +93,10 @@ MTRK({
 
 
 MTRK({
-        cmd: "jid",
-        desc: "gets jid of either replied user or present chat",
-        fromMe: wtype,
-        type: "user",
+    cmd: "jid",
+    desc: "gets jid of either replied user or present chat",
+    fromMe: wtype,
+    type: "user",
 }, async (m) => {
   try {
     if (m.quoted.sender) return await m.send(m.quoted.sender);
@@ -108,10 +108,10 @@ MTRK({
 })
 
 MTRK({
-        cmd: "pp|setpp",
-        desc: "changes profile picture to replied photo",
-        fromMe: true,
-        type: "user",
+    cmd: "pp|setpp",
+    desc: "changes profile picture to replied photo",
+    fromMe: true,
+    type: "user",
 }, async (m, text) => {
   try {
     if (!m.quoted.image && !m.image) return await m.send("_reply to a picture_")
@@ -129,10 +129,10 @@ MTRK({
 })
 
 MTRK({
-        cmd: "removepp",
-        desc: "removes profile picture",
-        fromMe: true,
-        type: "user",
+    cmd: "removepp",
+    desc: "removes profile picture",
+    fromMe: true,
+    type: "user",
 }, async (m, text) => {
   try {
     await m.client.removeProfilePicture(m.user.jid);
@@ -144,10 +144,10 @@ MTRK({
 })
 
 MTRK({
-        cmd: "clear",
-        desc: "clear a chat",
-        fromMe: true,
-        type: "user",
+    cmd: "clear",
+    desc: "clear a chat",
+    fromMe: true,
+    type: "user",
 }, async (m, text) => {
   try {
     await m.client.chatModify({
@@ -165,10 +165,10 @@ MTRK({
 })
 
 MTRK({
-        cmd: "pinchat|chatpin",
-        desc: "pin a chat",
-        fromMe: true,
-        type: "user"
+    cmd: "pinchat|chatpin",
+    desc: "pin a chat",
+    fromMe: true,
+    type: "user"
 }, async (m, text) => {
   try {
     await m.client.chatModify({
@@ -182,10 +182,10 @@ MTRK({
 })
 
 MTRK({
-        cmd: "unpinchat|unchatpin",
-        desc: "unpin a chat",
-        fromMe: true,
-        type: "user"
+    cmd: "unpinchat|unchatpin",
+    desc: "unpin a chat",
+    fromMe: true,
+    type: "user"
 }, async (m, text) => {
   try {
     await m.client.chatModify({
@@ -199,10 +199,10 @@ MTRK({
 })
 
 MTRK({
-        cmd: "block|blc",
-        desc: 'block a user',
-        fromMe: true,
-        type: 'user',
+    cmd: "block|blc",
+    desc: 'block a user',
+    fromMe: true,
+    type: 'user',
 }, async (m, text) => {
   try {
     if (m.isGroup && m.quoted?.sender) {
@@ -217,10 +217,10 @@ MTRK({
 })
 
 MTRK({
-        cmd: "unblock",
-        desc: 'unblock a user',
-        fromMe: true,
-        type: 'user',
+    cmd: "unblock",
+    desc: 'unblock a user',
+    fromMe: true,
+    type: 'user',
 }, async (m, text) => {
   try {
     if (m.isGroup && m.quoted?.sender) {
@@ -235,10 +235,10 @@ MTRK({
 })
 
 MTRK({
-        cmd: "listblock|allblocked",
-        desc: "fetches list of blocked numbers",
-        fromMe: true,
-        type: 'user',
+    cmd: "listblock|allblocked",
+    desc: "fetches list of blocked numbers",
+    fromMe: true,
+    type: 'user',
 }, async (m, text) => {
   try {
     const num = await m.client.fetchBlocklist();
@@ -252,10 +252,10 @@ MTRK({
 })
 
 MTRK({
-        cmd: "setname",
-        desc: "set profile name",
-        fromMe: true,
-        type: "user",
+    cmd: "setname",
+    desc: "set profile name",
+    fromMe: true,
+    type: "user",
 }, async (m, text) => {
   try {
     q = text
@@ -269,10 +269,10 @@ MTRK({
 })
 
 MTRK({
-        cmd: "bio|setbio",
-        desc: "set bio for profile",
-        fromMe: true,
-        type: "user",
+    cmd: "bio|setbio",
+    desc: "set bio for profile",
+    fromMe: true,
+    type: "user",
 }, async (m, text) => {
   try {
     let query = text
@@ -286,10 +286,10 @@ MTRK({
 })
 
 MTRK({
-  cmd: "getpp",
-  desc: "get profile pic of a user/group",
-  fromMe: true,
-  type: "user",
+   cmd: "getpp",
+   desc: "get profile pic of a user/group",
+   fromMe: true,
+   type: "user",
 }, async (m, text) => {
   try {
     if (m.isGroup && !m.quoted.sender) {
@@ -313,10 +313,10 @@ MTRK({
 
 
 MTRK({
-        cmd: "forward|fwrd",
-        desc: "forward a message",
-        fromMe: true,
-        type: "user",
+    cmd: "forward|fwrd",
+    desc: "forward a message",
+    fromMe: true,
+    type: "user",
 }, async (m, text, cmd, store) => {
   try {
     if (!m.quoted) return await m.send("_reply to the msg you want to forward.._")
@@ -336,9 +336,9 @@ MTRK({
 
 MTRK({
   cmd: 'lastseen',
-	fromMe: true,
-	desc: 'to change lastseen privacy',
-	type: 'privacy'
+  fromMe: true,
+  desc: 'to change lastseen privacy',
+  type: 'privacy'
 }, async (message, match, cmd) => {
   try {
     if (!match) return await message.send(`_*Example:-* ${cmd} all_\n_to change last seen privacy settings_`);
@@ -352,10 +352,10 @@ MTRK({
   }
 })
 MTRK({
-cmd: 'online',
-	fromMe: true,
-	desc: 'to change online privacy',
-	type: 'privacy'
+   cmd: 'online',
+   fromMe: true,
+   desc: 'to change online privacy',
+   type: 'privacy'
 }, async (message, match, cmd) => {
   try {
     if (!match) return await message.send(`_*Example:-* ${cmd} all_\n_to change *online*  privacy settings_`);
@@ -369,10 +369,10 @@ cmd: 'online',
   }
 })
 MTRK({
-cmd: 'mypp',
-	fromMe: true,
-	desc: 'privacy setting profile picture',
-	type: 'privacy'
+   cmd: 'mypp',
+   fromMe: true,
+   desc: 'privacy setting profile picture',
+   type: 'privacy'
 }, async (message, match, cmd) => {
   try {
     if (!match) return await message.send(`_*Example:-* ${cmd} all_\n_to change *profile picture*  privacy settings_`);
@@ -386,7 +386,7 @@ cmd: 'mypp',
   }
 })
 MTRK({
-cmd: 'mystatus',
+    cmd: 'mystatus',
 	fromMe: true,
 	desc: 'privacy for my status',
 	type: 'privacy'
@@ -403,7 +403,7 @@ cmd: 'mystatus',
   }
 })
 MTRK({
-cmd: 'read',
+    cmd: 'read',
 	fromMe: true,
 	desc: 'privacy for read message',
 	type: 'privacy'
@@ -420,7 +420,7 @@ cmd: 'read',
   }
 })
 MTRK({
-cmd: 'allow-gcadd|groupadd',
+    cmd: 'allow-gcadd|groupadd',
 	fromMe: true,
 	desc: 'privacy for group add',
 	type: 'privacy'
