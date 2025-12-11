@@ -1,0 +1,236 @@
+GNU GENERAL PUBLIC LICENSE
+                       Version 3, 29 June 2007
+
+Copyright (C) 2025 Mudau Thendo
+Royal - Multi-Device WhatsApp Bot
+<https://github.com/mudauthendo2011-hub/MT-RK>
+
+Everyone is permitted to copy and distribute verbatim copies
+of this license document, but changing it is not allowed.
+
+---
+
+EXTENDED PREAMBLE
+
+The Royal bot is more than just software—it is a philosophy of freedom,
+collaboration, and empowerment in the digital community. By using,
+sharing, or modifying Royal, you agree to uphold the principles of open
+access, transparency, and ethical conduct. This license is designed to
+ensure that Royal, and any derivative works, remain free and open,
+allowing every user to benefit from its features while respecting the
+rights of the original creator, Mudau Thendo.
+
+Royal is intended to be used responsibly. Misuse, misrepresentation, or
+any action that harms the community or other users is strictly
+discouraged. This extended license explains in detail your rights,
+responsibilities, and limitations when interacting with the Royal bot.
+
+By reading this license, you acknowledge the following principles:
+
+1. Freedom to Use: You may run Royal for any purpose, personal or
+   commercial, without restriction.
+
+2. Freedom to Study: You may study how Royal works and make modifications
+   to fit your own needs, while crediting the original creators.
+
+3. Freedom to Share: You may distribute copies of Royal in unmodified
+   or modified form to others, ensuring that it remains free and open.
+
+4. Freedom to Collaborate: Contributions to Royal are encouraged, provided
+   that the license terms are followed.
+
+---
+
+DEFINITIONS
+
+1. "Royal" refers to the software package created and maintained by
+   Mudau Thendo, including all its original code, assets, and documentation.
+
+2. "You" or "Licensee" refers to any individual or organization that
+   receives, uses, modifies, or redistributes Royal.
+
+3. "Modification" refers to any changes made to Royal's source code,
+   configuration, media, or documentation.
+
+4. "Distribution" refers to sharing Royal, in source or compiled form,
+   with any third party.
+
+5. "Community" refers to all users, contributors, and maintainers
+   involved with Royal.
+
+6. "Derivative Work" refers to any work based upon Royal that is modified,
+   enhanced, or extended in any way.
+
+---
+
+RIGHTS GRANTED
+
+1. You have the right to run Royal on any device, in any environment,
+   including servers, personal devices, or cloud platforms.
+
+2. You have the right to study the source code, configuration files,
+   media assets, and any included documentation to understand
+   Royal’s functionality.
+
+3. You have the right to redistribute Royal in its original form,
+   provided you include this LICENSE without alteration.
+
+4. You have the right to create derivative works, provided that:
+   a. All modifications are clearly documented.
+   b. The original author, Mudau Thendo, is credited.
+   c. The modified work is licensed under the same terms as this
+      Royal GPLv3 Mega-License.
+
+5. You have the right to merge Royal with other free or open-source
+   software, provided that all license terms are compatible and followed.
+
+6. You have the right to include Royal in educational, research,
+   commercial, or nonprofit projects, as long as the license is respected.
+
+---
+
+RESPONSIBILITIES AND ETHICS
+
+1. You must include this LICENSE in all copies or derivative works
+   you distribute.
+
+2. You must clearly indicate any changes or modifications made to Royal.
+
+3. You must not remove or alter copyright notices or licensing information.
+
+4. You must respect the Royal community and avoid harmful conduct,
+   including but not limited to:
+   a. Deleting critical features without disclosure.
+   b. Using Royal for harassment, phishing, or malware distribution.
+   c. Claiming Royal as your original work without proper attribution.
+
+5. You must notify the community or original author of critical
+   vulnerabilities or bugs, especially if you distribute modified versions.
+
+6. You must avoid tagging mods, guards, or other community members
+   unnecessarily or maliciously within Royal bot commands.
+
+---
+
+WARRANTY AND LIABILITY
+
+1. Royal is provided “as is,” without any warranty of any kind.
+
+2. The entire risk of using, copying, or modifying Royal lies with
+   the licensee.
+
+3. Mudau Thendo and contributors are not liable for:
+   a. Loss of data, revenue, or profits.
+   b. Security breaches, hacks, or exploits.
+   c. Malfunctions caused by improper deployment or modifications.
+
+4. Users agree to accept responsibility for any consequences
+   arising from the use of Royal.
+
+---
+
+CONTRIBUTION GUIDELINES
+
+1. All contributions to Royal should adhere to ethical standards
+   and respect the rights of all community members.
+
+2. Contributions may include:
+   a. Bug fixes
+   b. Feature enhancements
+   c. Documentation improvements
+   d. Design, branding, or UI enhancements
+
+3. Contributors must provide a clear description of changes and
+   follow the original Royal license terms.
+
+4. Any third-party contributions are automatically licensed under
+   this Royal GPLv3 Mega-License.
+
+---
+
+ROYAL BRANDING RULES
+
+1. All public distributions must retain the “Royal” name and
+   clearly indicate the original author, Mudau Thendo.
+
+2. Modified versions must:
+   a. Include a visible notice that it is a modified derivative.
+   b. Not use the original logo without permission.
+   c. Avoid misleading users into thinking it is the official Royal bot.
+
+3. No derivative work may claim ownership of the original Royal
+   bot’s brand, reputation, or assets.
+
+---
+
+LEGAL NOTES
+
+1. This license is enforceable under the laws of the country
+   where the original author resides (South Africa) and international
+   copyright treaties.
+
+2. Non-compliance may result in termination of license rights.
+
+3. Users who distribute Royal must ensure that recipients are aware
+   of this license and agree to its terms.
+
+4. This license supersedes any prior agreements regarding
+   Royal distribution and use.
+
+---
+
+COMMUNITY GUIDELINES
+
+1. Respect all users of Royal. Avoid harassment, spam, or misuse.
+
+2. Use Royal in ways that benefit the community: educational,
+   collaborative, or supportive purposes.
+
+3. Credit contributors and avoid plagiarism of community-submitted
+   enhancements.
+
+4. Report any vulnerabilities, bugs, or unethical behavior to the
+   community or original author.
+
+5. Promote transparency and open collaboration while following
+   the Royal license.
+
+---
+
+EXTENDED FAQ AND EXAMPLES
+
+Q1: Can I sell a modified Royal bot?
+A: Yes, but you must provide source code, include this license,
+   and credit Mudau Thendo.
+
+Q2: Can I integrate Royal into a commercial app?
+A: Yes, provided you comply with GPLv3 terms and Royal branding rules.
+
+Q3: Can I remove features for my users?
+A: Yes, but modifications must be documented, and users should be
+   informed that it is a derivative work.
+
+Q4: Can I redistribute Royal privately?
+A: Yes, as long as license terms, attribution, and community ethics
+   are followed.
+
+Q5: Can I make a Royal fork on GitHub?
+A: Yes, but clearly indicate that it is a fork and include this license.
+
+---
+
+You should have received a copy of the GNU General Public License
+along with Royal. If not, see <https://www.gnu.org/licenses/>.
+
+For updates, contributions, or support, visit:
+https://github.com/mudauthendo2011-hub/MT-RK
+
+---
+
+THANK YOU FOR RESPECTING THIS LICENSE AND CONTRIBUTING TO THE
+ROYAL BOT COMMUNITY!
+
+---
+
+Royal - Built by Mudau Thendo, 2025
+https://github.com/mudauthendo2011-hub/MT-RK
