@@ -7,136 +7,58 @@
  * -------------------------------------------------------------------------------
  */
 
-const os = require("os")
-const { changeFont } = require("../core")
-const { prefix, MTRK, wtype, secondsToHms, config, commands } = require("../core")
-const { version } = require("../package.json")
+const { format } = require('util');
+const os = require('os');
+const moment = require('moment-timezone');
+const Settings = require('../framework/Class/Settings');
+const s = require('../set');
+const { cm } = require('../framework/Class/Commands'); // MT-RK command list
 
-const format = (bytes) => {
-  const sizes = ["B", "KB", "MB", "GB"]
-  if (bytes === 0) return "0 B"
-  const i = Math.floor(Math.log(bytes) / Math.log(1024))
-  return parseFloat((bytes / Math.pow(1024, i)).toFixed(1)) + " " + sizes[i]
-}
-
-function clockString(ms) {
-  let h = isNaN(ms) ? "--" : Math.floor(ms / 3600000)
-  let m = isNaN(ms) ? "--" : Math.floor(ms % 3600000 / 60000)
-  let s = isNaN(ms) ? "--" : Math.floor(ms % 60000 / 1000)
-  return [h, m, s].map(v => v.toString().padStart(2, 0)).join(":")
-}
-
-const getRandomFont = () => {
-  return "sansItalic"
-}
-
-kord({
-  cmd: "menu",
-  desc: "list of commands",
-  react: "💬",
-  fromMe: wtype,
-  type: "help",
-}, async (m) => {
+MTRK({
+  cmd: 'menu',
+  desc: 'Display all bot commands and system info',
+  fromMe: true,
+  type: 'bot'
+}, async (m, text) => {
   try {
-    const types = {}
-    commands.forEach(({ cmd, type }) => {
-      if (!cmd) return
-      const main = cmd.split("|")[0].trim()
-      const cat = type || "other"
-      if (!types[cat]) types[cat] = []
-      types[cat].push(main)
-    })
+    // Organize commands by category
+    let commandsByCategory = {};
+    cm.forEach(cmd => {
+      if (!commandsByCategory[cmd.categorie]) commandsByCategory[cmd.categorie] = [];
+      commandsByCategory[cmd.categorie].push(cmd.nomCom);
+    });
 
-    const requestedType = m.text ? m.text.toLowerCase().trim() : null
-    const availableTypes = Object.keys(types).map(t => t.toLowerCase())
-    
-    const more = String.fromCharCode(8206)
-    const readmore = more.repeat(4001)
-    
-    if (requestedType && availableTypes.includes(requestedType)) {
-      const actualType = Object.keys(types).find(t => t.toLowerCase() === requestedType)
-      
-      const at = await changeFont(actualType.toUpperCase(), "monospace")
-      const cmdList = types[actualType].map(cmd => 
-        `│ ${prefix}${cmd.replace(/[^a-zA-Z0-9-+]/g, "")}`
-      ).join('\n')
-      const formattedCmds = await changeFont(cmdList, getRandomFont())
-      
-      let menu = `\`\`\`┌─────── ⨺⃝Х ────────┐
- Category: ${actualType.toUpperCase()}
- Commands: ${types[actualType].length}
- Prefix: ${prefix}
-└───────────────────┘\`\`\`
-${readmore}
+    // Date & time
+    moment.tz(s.TIMEZONE);
+    const date = moment().format('DD/MM/YYYY');
+    const time = moment().format('HH:mm:ss');
 
-     ┏ ${at} ┓ 
-┍────────⨺⃝Х────────┑ 
-${formattedCmds}
-┕────────⨺⃝Х ───────┙ 
+    // Header
+    let msg = `\n╭───『 *${s.BOT_NAME} Menu* 』───\n`;
+    msg += `│  Prefix: ${s.PREFIX}\n`;
+    msg += `│  Mode: ${Settings.MODE}\n`;
+    msg += `│ create: Mudau thendo
+    msg += `╰────────────────────\n\n`;
 
-Tip: Use ${prefix}menu to see all categories`
-      
-      const bodyContent = `     ┏ ${at} ┓ 
-┍────────⨺⃝Х────────┑ 
-${formattedCmds}
-┕────────⨺⃝Х ───────┙ 
-
-Tip: Use ${prefix}menu to see all categories`
-      
-      const styledBody = await changeFont(bodyContent, getRandomFont())
-      const final = `\`\`\`┌────── ⨺⃝Х ──────┐
- Category: ${actualType.toUpperCase()}
- Commands: ${types[actualType].length}
- Prefix: ${prefix}
-└──────────────────────┘\`\`\`
-${readmore}
-
-${styledBody}`
-      return m.send(final)
+    // Command list
+    msg += '╭───『 *COMMAND MENU* 』───\n';
+    for (const category in commandsByCategory) {
+      msg += `│ ⚔️ ${category.toUpperCase()}:\n`;
+      const cmds = commandsByCategory[category];
+      for (let i = 0; i < cmds.length; i++) {
+        msg += `│ • ${s.PREFIX}${cmds[i]}\n`;
+      }
+      msg += '│\n';
     }
-    
-    const date = new Date().toLocaleDateString()
-    const time = new Date().toLocaleTimeString()
-    const uptime = await secondsToHms(process.uptime())
-    const memoryUsage = format(os.totalmem() - os.freemem())
-    
-    let menu = `┌─────── ⨺⃝Х ───────┐
- Owner: ${config().OWNER_NAME}
- Name: ${config().BOT_NAME}
- Prefix: . 
-└─────────────────┘
-${readmore}
+    msg += '╰────────────────────\n\n';
+    msg += `🗡️ *Developers*: Mudau Thendo\n`;
+    msg += '✦⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅✦';
 
-`
+    // Send menu
+    await m.send(msg);
 
-    const categoryList = Object.keys(types).map(async (type) => {
-      const cmdList = types[type].map(cmd => 
-        `│ ${prefix}${cmd.replace(/[^a-zA-Z0-9-+]/g, "")}`
-      ).join('\n')
-      const formattedCmds = await changeFont(cmdList, getRandomFont())
-      const tty = await changeFont(type.toUpperCase(), "monospace")
-      
-      return ` ┏ ${tty} ┓
-┍────────⨺⃝Х────────┑ 
-${formattedCmds}
-┕────────⨺⃝─────────┙ `
-    })
-
-    const resolvedCategoryList = await Promise.all(categoryList)
-    menu += resolvedCategoryList.join('\n\n')
-
-
-    menu += `\n\nTip: this bot was made by the 彡⨺⃝Х彡 team`
-
-    const final = menu.trim()
- try {
-  if (config().MENU_IMAGE)
-    return m.send(config().MENU_IMAGE, { caption: final }, "image")
-   } catch (e) {}
-
-   return m.send(final)
-  } catch (e) {
-    console.log("cmd error", e)
-    return await m.sendErr(e)
+  } catch (err) {
+    console.error('Menu Error:', err);
+    await m.send('_*somthing went rwong while getting menu*_: ' + err);
   }
-})
+});
