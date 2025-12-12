@@ -14,7 +14,7 @@ const { MTRK, wtype, updateConfig, prefix, updateEnv, updateEnvSudo, addEnvSudo,
   
   
 module.exports = {
-  cmd: "setvar",
+  name: "setvar",
   desc: "set a config in config.env/config.js",
   fromMe: true,
   type: "config",
@@ -55,7 +55,7 @@ module.exports = {
 })
 
 module.exports = {
-cmd: "getvar",
+name: "getvar",
   desc: "get all variables from config.js/config.env",
   fromMe: true,
   type: "config",
@@ -79,7 +79,7 @@ cmd: "getvar",
 })
 
 module.exports = {
-  cmd: 'delvar',
+  name: 'delvar',
   desc: "delete a variable/setting",
   fromMe: true,
   type: "config",
@@ -110,7 +110,7 @@ module.exports = {
 })
 
 module.exports = {
-  cmd: "allvar",
+  name: "allvar",
   desc: "get all variables/settings",
   fromMe: true,
   type: "config",
@@ -286,21 +286,21 @@ function deltog() {
 
 
 module.exports = {
-  cmd: "readstatus",
+  name: "readstatus",
   desc: "turn on/off readstatus",
   fromMe: true,
   type: "config",
 }, toggle("readstatus", "STATUS_VIEW", "Read Status"))
 
 module.exports = {
-  cmd: "likestatus",
+  name: "likestatus",
   desc: "turn on/off likestatus",
   fromMe: true,
   type: "config",
 }, toggle("likestatus", "LIKE_STATUS", "Like Status"))
 
 module.exports = {
-  cmd: "startupmsg",
+  name: "startupmsg",
   desc: "turn on/off startupmsg",
   fromMe: true,
   type: "config",
@@ -308,14 +308,14 @@ module.exports = {
 
 
 module.exports = {
-  cmd: "alwaysonline",
+  name: "alwaysonline",
   desc: "turn on/off always online",
   fromMe: true,
   type: "config",
 }, toggle("alwaysonline", "ALWAYS_ONLINE", "Always Online"))
 
 MTRK({
-  cmd: "antidelete",
+  name: "antidelete",
   desc: "configure antidelete settings",
   fromMe: true,
   type: "config",
@@ -323,49 +323,49 @@ MTRK({
 
 
 module.exports = {
-  cmd: "antiedit",
+  name: "antiedit",
   desc: "turn on/off Anti-Edit",
   fromMe: true,
   type: "config",
 }, toggle("antiedit", "ANTI_EDIT", "Anti Edit"))
 
 module.exports = {
-  cmd: "antieditchat",
+  name: "antieditchat",
   desc: "turn on/off antiedit in chat",
   fromMe: true,
   type: "config",
 }, toggle("antieditchat", "ANTI_EDIT_IN_CHAT", "Anti Edit In Chat"))
 
 module.exports = {
-  cmd: "savestatus",
+  name: "savestatus",
   desc: "turn on/off save status",
   fromMe: true,
   type: "config",
 }, toggle("savestatus", "SAVE_STATUS", "Save Status"))
 
 module.exports = {
-  cmd: "cmdreact",
+  name: "cmdreact",
   desc: "turn on/off command react",
   fromMe: true,
   type: "config",
 }, toggle("cmdreact", "CMD_REACT", "Command React"))
 
 module.exports = {
-  cmd: "readmsg|read",
+  name: "readmsg|read",
   desc: "turn on/off read message",
   fromMe: true,
   type: "config",
 }, toggle("readmsg", "READ_MESSAGE", "Read Message"))
 
 module.exports = {
-  cmd: "rejectcall",
+  name: "rejectcall",
   desc: "turn on/off reject call",
   fromMe: true,
   type: "config",
 }, toggle("rejectcall", "REJECT_CALL", "Reject Call"))
 
 module.exports = {
-  cmd: "setsudo",
+  name: "setsudo",
   desc: "add a user to sudo",
   fromMe: true,
   type: "config",
@@ -417,7 +417,7 @@ if (text.trim().toLowerCase() === 'admins') {
 })
 
 module.exports = {
-  cmd: "delsudo",
+  name: "delsudo",
   desc: "delete user from sudo list",
   fromMe: true,
   type: "config",
@@ -469,7 +469,7 @@ if (text.trim().toLowerCase() === 'admins') {
 
 
 module.exports = {
-  cmd: "guards|protecters",
+  name: "guards|protecters",
   desc: "get all guards",
   fromMe: wtype,
   type: "config",
@@ -511,7 +511,7 @@ module.exports = {
 });
 
 module.exports = {
-  cmd: "setmod|addmod",
+  name: "setmod|addmod",
   desc: "add a user to mod list",
   fromMe: true,
   type: "config",
@@ -563,7 +563,7 @@ if (text.trim().toLowerCase() === 'admins') {
 })
 
 module.exports = {
-  cmd: "delmod",
+  name: "delmod",
   desc: "delete user from mod list",
   fromMe: true,
   type: "config",
@@ -614,7 +614,7 @@ if (text.trim().toLowerCase() === 'admins') {
 })
 
 module.exports = {
-  cmd: "mods",
+  name: "mods",
   desc: "get all mods",
   fromMe: wtype,
   type: "config",
@@ -656,7 +656,7 @@ module.exports = {
 }); 
 
 module.exports = {
-cmd: "mode",
+name: "mode",
   desc: "set bot to private or public",
   fromMe: true,
   type: "config",
@@ -699,7 +699,7 @@ cmd: "mode",
 })
 
 module.exports = {
-cmd: "statusemoji",
+name: "statusemoji",
   desc: "set like status emoji",
   fromMe: true,
   type: "config",
@@ -714,7 +714,7 @@ cmd: "statusemoji",
 })
 
 module.exports = {
-  cmd: "savecmd",
+  name: "savecmd",
   desc: "set save emoji",
   fromMe: true,
   type: "config",
@@ -729,7 +729,7 @@ module.exports = {
 })
 
 module.exports = {
-  cmd: "vvcmd",
+  name: "vvcmd",
   desc: "set vv emoji",
   fromMe: true,
   type: "config",
