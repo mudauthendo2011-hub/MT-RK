@@ -21,7 +21,7 @@ const {
 const ffmpeg = require('fluent-ffmpeg');
 const http = require('http')
 
-MTRK({
+module.exports = {
     cmd: "ss",
     desc: "screenshots a given url live page",
     fromMe: wtype,
@@ -45,7 +45,7 @@ MTRK({
     }
 })
 
-MTRK({
+module.exports = {
     cmd: "sstab",
     desc: "screenshots a given url live page(tab view)",
     fromMe: wtype,
@@ -69,7 +69,7 @@ MTRK({
     }
 })
 
-MTRK({
+module.exports = {
     cmd: "ssphone",
     desc: "screenshots a given url live page(Mobile version)",
     fromMe: wtype,
@@ -93,7 +93,7 @@ MTRK({
     }
 })
 
-MTRK({
+module.exports = {
     cmd: "ssfull",
     desc: "screenshots a given url live page(full page version)",
     fromMe: wtype,
@@ -117,7 +117,7 @@ MTRK({
     }
 })
 
-MTRK({
+module.exports = {
   cmd: "tts",
   desc: "text to speech",
   fromMe: wtype,
@@ -133,7 +133,7 @@ MTRK({
   }
 })
 
-MTRK({
+module.exports = {
 cmd: "audio2text|text",
   desc: "convert audio or video to text",
   fromMe: wtype,
@@ -152,7 +152,7 @@ cmd: "audio2text|text",
   }
 })
 
-MTRK({
+module.exports = {
         cmd: "wm|walink",
         desc: "return walink of either replied/mention/chat user",
         fromMe: wtype,
@@ -176,7 +176,7 @@ MTRK({
      }   
 })
 
-MTRK({
+module.exports = {
 cmd: "url|tourl|upload",
         desc: "uploads quoted media to Kord\'s Cdn and sends access url(safe)",
         fromMe: wtype,
@@ -195,7 +195,7 @@ cmd: "url|tourl|upload",
   }
 })
 
-MTRK({
+module.exports = {
 cmd: "temp-url|temp-upload",
         desc: "uploads quoted media to Kord\'s Cdn and sends access url(temporarily)",
         fromMe: wtype,
@@ -214,7 +214,7 @@ cmd: "temp-url|temp-upload",
   }
 })
 
-MTRK({
+module.exports = {
 cmd: "readmore",
         desc: "adds readmore to given text",
         fromMe: wtype,
@@ -234,7 +234,7 @@ cmd: "readmore",
 });
 
 
-MTRK({
+module.exports = {
 cmd: "define|whatis",
         desc: "defines given text",
         react: "🧩",
@@ -258,7 +258,7 @@ cmd: "define|whatis",
   }
 })
 
-MTRK({
+module.exports = {
 cmd: "weather",
         desc: "gives the weather information about given country",
         react: "🌦️",
@@ -299,7 +299,7 @@ cmd: "weather",
   }
 })
 
-MTRK({
+module.exports = {
         cmd: "tinyurl|shorten-url",
         desc: "makes shortened url Using the tinyurl api",
         fromMe: wtype,
@@ -335,7 +335,7 @@ function getQ(q) {
   return null
 }
 
-MTRK({
+module.exports = {
   cmd: "vv",
   desc: "resend a viewonce media as a normal media",
   fromMe: wtype,
@@ -403,7 +403,7 @@ MTRK({
 })
 
 
-MTRK({
+module.exports = {
   on: "all",
   fromMe: true,
 }, async (m, text) => {
@@ -456,7 +456,7 @@ MTRK({
 })
 
 
-MTRK({
+module.exports = {
   cmd: "pdf",
   desc: "Converts image to PDF or text to PDF",
   fromMe: wtype,
@@ -589,7 +589,7 @@ MTRK({
 });
 
 
-MTRK({
+module.exports = {
 cmd: "calc|calculate",
   desc: "perform a calculation",
   fromMe: wtype,
@@ -608,7 +608,7 @@ cmd: "calc|calculate",
   }
 })
 
-MTRK({
+module.exports = {
     cmd: "trt|translate",
     desc: "translate text to english/given lang code",
     fromMe: wtype,
@@ -665,7 +665,7 @@ cmd: "ngl",
   }
 })
 
-MTRK({
+module.exports = {
 cmd: "ip|ipbot",
     desc: "get ip for the bot",
     fromMe: wtype,
@@ -693,7 +693,7 @@ cmd: "ip|ipbot",
   }
 })
 
-MTRK({
+module.exports = {
 cmd: "wiki",
   desc: "search wiki",
   fromMe: wtype,
@@ -711,7 +711,7 @@ cmd: "wiki",
   }
 })
 
-MTRK({
+module.exports = {
 cmd: "bible",
   desc: "get verse/verses from the bible",
   fromMe: wtype,
@@ -729,7 +729,7 @@ cmd: "bible",
   }
 })
 
-MTRK({
+module.exports = {
 cmd: "font",
   desc: "change font of text",
   fromMe: wtype,
@@ -754,7 +754,7 @@ cmd: "font",
   }
 })
 
-MTRK({
+module.exports = {
   cmd: "compress",
   desc: "compress image/video",
   fromMe: wtype,
@@ -810,7 +810,7 @@ MTRK({
 
 
 
-MTRK({
+module.exports = {
 cmd: 'getdevice|device',
   desc: 'Get device of sender or quoted',
   fromMe: wtype,
