@@ -10,7 +10,7 @@ const { MTRK, wtype, prefix, sleep, extractUrlsFromString, fb, ytaudio, config, 
 const yts = require("yt-search")
 const { Sticker, StickerTypes } = require("wa-sticker-formatter");
 
-MTRK({
+module.exports = {
 cmd: "apk",
   desc: "download an andriod app",
   type: "downloader",
@@ -44,7 +44,7 @@ cmd: "apk",
 })
 
 
-MTRK({
+module.exports = {
 cmd: "apksearch",
   desc: "search apk and download",
   fromMe: wtype,
@@ -96,7 +96,7 @@ return await m.send({
   
 })
 
-MTRK({
+module.exports = {
   cmd: "subtitle",
   desc: "Download English subtitle for a movie",
   type: "downloader",
@@ -136,7 +136,7 @@ ${config().CAPTION}`;
   );
 });
 
-MTRK({
+module.exports = {
 cmd: "subtitlesearch|subtitles",
   desc: "Search subtitles from SubtitleCat",
   fromMe: wtype,
@@ -201,7 +201,7 @@ cmd: "subtitlesearch|subtitles",
 
 
 
-MTRK({
+module.exports = {
         cmd: "ytv|ytmp4",
         desc: "download a YouTube video with its link",
         type: "downloader",
@@ -246,7 +246,7 @@ MTRK({
 })
 
 
-MTRK({
+module.exports = {
         cmd: "yta|ytmp3",
         desc: "downloads YouTube audio with its link",
         fromMe: wtype,
@@ -290,7 +290,7 @@ try {
 }
 )
 
-MTRK({
+module.exports = {
         cmd: "video|ytvideo",
         desc: "downloads and send video based on the title given",
         fromMe: wtype,
@@ -320,7 +320,7 @@ m.react("")
 }
 })
 
-MTRK({
+module.exports = {
         cmd: "play|music",
         desc: "downloads and send audio based on the title given",
         fromMe: wtype,
@@ -354,8 +354,7 @@ MTRK({
        return m.send(`an error occured: ${err}`)
 }
 })
-MTRK({
-       cmd: "videodoc|ytvideodoc",
+module.exports = {       cmd: "videodoc|ytvideodoc",
         desc: "downloads and send video(document) based on the title given",
         fromMe: wtype,
         type: "downloader",
@@ -421,7 +420,7 @@ MTRK({
         }
 })
 
-MTRK({
+module.exports = {
         cmd: "ytvdoc|ytmp4doc",
         desc: "download a YouTube video with its link and send as document",
         type: "downloader",
@@ -464,7 +463,7 @@ MTRK({
      }
 })
 
-MTRK({
+module.exports = {
         cmd: "ytadoc|ytmp3doc",
         desc: "downloads YouTube audio with its link",
         fromMe: wtype,
@@ -507,7 +506,7 @@ try {
 }
 })
 
-MTRK({
+module.exports = {
         cmd: "tt|tiktok",
         desc: "downloads tiktok videos using the link given",
         fromMe: wtype,
@@ -550,7 +549,7 @@ MTRK({
         
 })
 
-MTRK({
+module.exports = {
         cmd: "tik-img|tt-img",
         desc: "downloads tiktok images using the link given",
         fromMe: wtype,
@@ -584,7 +583,7 @@ MTRK({
         }
 });
 
-MTRK({
+module.exports = {
         cmd: "twitter|xdl",
         desc: "downloads Twitter/X video/pic",
         fromMe: wtype,
@@ -612,7 +611,7 @@ MTRK({
         }
 })
 
-MTRK({
+module.exports = {
         cmd: "fb|facebook",
         desc: "downloads Facebook videos",
         fromMe: wtype,
@@ -654,7 +653,7 @@ MTRK({
         }
 });
 
-MTRK({
+module.exports = {
         cmd: "insta|ig",
         desc: "downloads Instagram videos/images",
         fromMe: wtype,
@@ -683,7 +682,7 @@ var link = links.find(url => igregex.test(url));
         }
 })
 
-MTRK({
+module.exports = {
         cmd: "mediafire",
         desc: "downloads mediafire links",
         fromMe: wtype,
