@@ -12,7 +12,7 @@ const fs = require("fs");
 const path = require("path");
 const fetch = require("node-fetch")
 
-MTRK({
+module.exports = {
     cmd: "anime",
     desc: "search for anime info from MyAnimeList",
     fromMe: wtype,
@@ -43,7 +43,7 @@ MTRK({
     }
 })
 
-MTRK({
+module.exports = {
     cmd: "waifu|animegirl",
     desc: "send random anime girl image",
     fromMe: wtype,
@@ -65,7 +65,7 @@ MTRK({
     }
 })
 
-MTRK({
+module.exports = {
     cmd: "manga",
     desc: "search for manga information from MyAnimeList",
     fromMe: wtype,
@@ -98,7 +98,7 @@ MTRK({
     }
 })
 
-MTRK({
+module.exports = {
     cmd: "animequote",
     desc: "get random anime quote",
     type: "anime",
@@ -120,7 +120,7 @@ MTRK({
     }
 })
 
-MTRK({
+module.exports = {
     cmd: "animenews",
     desc: "latest anime news from MyAnimeList",
     fromMe: wtype,
@@ -147,7 +147,7 @@ MTRK({
     }
 })
 
-MTRK({
+module.exports = {
     cmd: "character|animechar",
     desc: "search for anime character info",
     fromMe: wtype,
@@ -176,7 +176,7 @@ MTRK({
     }
 })
 
-MTRK({
+module.exports = {
     cmd: "animesearch|animeinfo",
     desc: "search anime by image (reply to image)",
     fromMe: wtype,
@@ -217,7 +217,7 @@ MTRK({
     }
 })
 
-MTRK({
+module.exports = {
     cmd: "animewatch|watching",
     desc: "track anime you're currently watching",
     fromMe: wtype,
@@ -272,7 +272,7 @@ MTRK({
     }
 })
 
-MTRK({
+module.exports = {
     cmd: "animegif|animatedgif",
     desc: "sends random anime gif based on category",
     fromMe: wtype,
@@ -296,7 +296,7 @@ MTRK({
     }
 })
 
-MTRK({
+module.exports = {
     cmd: "season|animeseason",
     desc: "get anime from specific season",
     fromMe: wtype,
@@ -337,7 +337,7 @@ MTRK({
     }
 })
 
-MTRK({
+module.exports = {
     cmd: "animerec|recommend",
     desc: "get anime recommendations",
     fromMe: wtype,
@@ -380,7 +380,7 @@ MTRK({
     }
 })
 
-MTRK({
+module.exports = {
     cmd: "airing|nextep",
     desc: "check when next episode airs",
     fromMe: wtype,
@@ -452,7 +452,7 @@ MTRK({
 
 
 
-MTRK({
+module.exports = {
     cmd: "slap",
     desc: "send waifu slap animation",
     fromMe: wtype,
@@ -485,7 +485,7 @@ MTRK({
     }
 });
 
-MTRK({
+module.exports = {
     cmd: "cry",
     desc: "send waifu cry animation",
     fromMe: wtype,
@@ -518,7 +518,7 @@ MTRK({
     }
 });
 
-MTRK({
+module.exports = {
     cmd: "hug",
     desc: "send waifu hug animation",
     fromMe: wtype,
@@ -551,7 +551,7 @@ MTRK({
     }
 });
 
-MTRK({
+module.exports = {
     cmd: "kiss",
     desc: "send waifu kiss animation",
     fromMe: wtype,
@@ -584,7 +584,7 @@ MTRK({
     }
 });
 
-MTRK({
+module.exports = {
     cmd: "lick",
     desc: "send waifu lick animation",
     fromMe: wtype,
@@ -617,7 +617,7 @@ MTRK({
     }
 });
 
-MTRK({
+module.exports = {
     cmd: "pat",
     desc: "send waifu pat animation",
     fromMe: wtype,
@@ -650,7 +650,7 @@ MTRK({
     }
 });
 
-MTRK({
+module.exports = {
     cmd: "blush",
     desc: "send waifu blush animation",
     fromMe: wtype,
@@ -683,7 +683,7 @@ MTRK({
     }
 });
 
-MTRK({
+module.exports = {
     cmd: "kill",
     desc: "send waifu kill animation",
     fromMe: wtype,
@@ -716,7 +716,7 @@ MTRK({
     }
 });
 
-MTRK({
+module.exports = {
     cmd: "kik",
     desc: "send waifu kick animation",
     fromMe: wtype,
@@ -749,7 +749,7 @@ MTRK({
     }
 });
 
-MTRK({
+module.exports = {
     cmd: "bite",
     desc: "send waifu bite animation",
     fromMe: wtype,
@@ -782,7 +782,7 @@ MTRK({
     }
 });
 
-MTRK({
+module.exports = {
     cmd: "high-five",
     desc: "send waifu high-five animation",
     fromMe: wtype,
@@ -815,7 +815,7 @@ MTRK({
     }
 });
 
-MTRK({
+module.exports = {
     cmd: "handhold",
     desc: "send waifu handhold animation",
     fromMe: wtype,
@@ -848,7 +848,7 @@ MTRK({
     }
 });
 
-MTRK({
+module.exports = {
     cmd: "dance",
     desc: "send waifu dance animation",
     fromMe: wtype,
@@ -881,7 +881,7 @@ MTRK({
     }
 });
 
-MTRK({
+module.exports = {
     cmd: "bully",
     desc: "send waifu bully animation",
     fromMe: wtype,
@@ -914,7 +914,7 @@ MTRK({
     }
 });
 
-MTRK({
+module.exports = {
     cmd: "wink",
     desc: "send waifu wink animation",
     fromMe: wtype,
@@ -947,7 +947,7 @@ MTRK({
     }
 });
 
-MTRK({
+module.exports = {
     cmd: "cuddle",
     desc: "send waifu cuddle animation",
     fromMe: wtype,
@@ -980,7 +980,7 @@ MTRK({
     }
 });
 
-MTRK({
+module.exports = {
     cmd: "awoo",
     desc: "send waifu awoo",
     fromMe: wtype,
@@ -1002,7 +1002,7 @@ MTRK({
     }
 });
 
-MTRK({
+module.exports = {
     cmd: "cringe",
     desc: "send waifu cringe",
     fromMe: wtype,
@@ -1024,7 +1024,7 @@ MTRK({
     }
 });
 
-MTRK({
+module.exports = {
     cmd: "megumin",
     desc: "send megumin waifu",
     fromMe: wtype,
@@ -1046,7 +1046,7 @@ MTRK({
     }
 });
 
-MTRK({
+module.exports = {
     cmd: "shinobu",
     desc: "send shinobu waifu",
     fromMe: wtype,
