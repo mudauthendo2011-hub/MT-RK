@@ -9,9 +9,9 @@
  */
  
  
- const { kord, wtype, isAdmin, isadminn, saveFilter, listFilters, removeFilter, prefix, getData, storeData, isBotAdmin} = require("../core")
+ const { MTRK, wtype, isAdmin, isadminn, saveFilter, listFilters, removeFilter, prefix, getData, storeData, isBotAdmin} = require("../core")
 
-MTRK({
+module.exports = {
   cmd: "delete|del|dlt",
   desc: "delete a replied message",
   fromMe: wtype,
@@ -47,7 +47,7 @@ MTRK({
 })
 
 
-MTRK({
+module.exports = {
 	cmd: "archive",
     desc: "archive a chat",
     fromMe: true,
@@ -69,7 +69,7 @@ MTRK({
   }
 })
 
-MTRK({
+module.exports = {
     cmd: "unarchive",
     desc: "unarchive a chat",
     fromMe: true,
@@ -92,7 +92,7 @@ MTRK({
 })
 
 
-MTRK({
+module.exports = {
     cmd: "jid",
     desc: "gets jid of either replied user or present chat",
     fromMe: wtype,
@@ -107,7 +107,7 @@ MTRK({
   }
 })
 
-MTRK({
+module.exports = {
     cmd: "pp|setpp",
     desc: "changes profile picture to replied photo",
     fromMe: true,
@@ -128,7 +128,7 @@ MTRK({
   }
 })
 
-MTRK({
+module.exports = {
     cmd: "removepp",
     desc: "removes profile picture",
     fromMe: true,
@@ -143,7 +143,7 @@ MTRK({
   }
 })
 
-MTRK({
+module.exports = {
     cmd: "clear",
     desc: "clear a chat",
     fromMe: true,
@@ -164,7 +164,7 @@ MTRK({
   }
 })
 
-MTRK({
+module.exports = {
     cmd: "pinchat|chatpin",
     desc: "pin a chat",
     fromMe: true,
@@ -181,7 +181,7 @@ MTRK({
   }
 })
 
-MTRK({
+module.exports = {
     cmd: "unpinchat|unchatpin",
     desc: "unpin a chat",
     fromMe: true,
@@ -198,7 +198,7 @@ MTRK({
   }
 })
 
-MTRK({
+module.exports = {
     cmd: "block|blc",
     desc: 'block a user',
     fromMe: true,
@@ -216,7 +216,7 @@ MTRK({
   }
 })
 
-MTRK({
+module.exports = {
     cmd: "unblock",
     desc: 'unblock a user',
     fromMe: true,
@@ -234,7 +234,7 @@ MTRK({
   }
 })
 
-MTRK({
+module.exports = {
     cmd: "listblock|allblocked",
     desc: "fetches list of blocked numbers",
     fromMe: true,
@@ -251,7 +251,7 @@ MTRK({
   }
 })
 
-MTRK({
+module.exports = {
     cmd: "setname",
     desc: "set profile name",
     fromMe: true,
@@ -268,7 +268,7 @@ MTRK({
   }
 })
 
-MTRK({
+module.exports = {
     cmd: "bio|setbio",
     desc: "set bio for profile",
     fromMe: true,
@@ -285,7 +285,7 @@ MTRK({
   }
 })
 
-MTRK({
+module.exports = {
    cmd: "getpp",
    desc: "get profile pic of a user/group",
    fromMe: true,
@@ -312,7 +312,7 @@ MTRK({
 })
 
 
-MTRK({
+module.exports = {
     cmd: "forward|fwrd",
     desc: "forward a message",
     fromMe: true,
@@ -334,7 +334,7 @@ MTRK({
   }
 })
 
-MTRK({
+module.exports = {
   cmd: 'lastseen',
   fromMe: true,
   desc: 'to change lastseen privacy',
@@ -351,7 +351,7 @@ MTRK({
     return await message.sendErr(e)
   }
 })
-MTRK({
+module.exports = {
    cmd: 'online',
    fromMe: true,
    desc: 'to change online privacy',
@@ -368,7 +368,7 @@ MTRK({
     return await message.sendErr(e)
   }
 })
-MTRK({
+module.exports = {
    cmd: 'mypp',
    fromMe: true,
    desc: 'privacy setting profile picture',
@@ -385,7 +385,7 @@ MTRK({
     return await message.sendErr(e)
   }
 })
-MTRK({
+module.exports = {
     cmd: 'mystatus',
 	fromMe: true,
 	desc: 'privacy for my status',
@@ -402,7 +402,7 @@ MTRK({
     return await message.sendErr(e)
   }
 })
-MTRK({
+module.exports = {
     cmd: 'read',
 	fromMe: true,
 	desc: 'privacy for read message',
@@ -419,7 +419,7 @@ MTRK({
     return await message.sendErr(e)
   }
 })
-MTRK({
+module.exports = {
     cmd: 'allow-gcadd|groupadd',
 	fromMe: true,
 	desc: 'privacy for group add',
@@ -439,7 +439,7 @@ MTRK({
 
 
 
-MTRK({
+module.exports = {
   cmd: "pfilter",
   desc: "Set a PM filter",
   fromMe: true,
@@ -455,7 +455,7 @@ MTRK({
   }
 })
 
-MTRK({
+module.exports = {
   cmd: "pstop",
   desc: "Remove a PM filter",
   fromMe: true,
@@ -471,7 +471,7 @@ MTRK({
   }
 })
 
-MTRK({
+module.exports = {
   cmd: "gfilter",
   desc: "Set a group filter",
   fromMe: true,
@@ -488,7 +488,7 @@ MTRK({
   }
 })
 
-MTRK({
+module.exports = {
   cmd: "gstop",
   desc: "Remove a group filter",
   fromMe: true,
@@ -505,7 +505,7 @@ MTRK({
   }
 })
 
-MTRK({
+module.exports = {
   on: "text",
   fromMe: false,
 }, async (m) => {
@@ -541,7 +541,7 @@ MTRK({
   }
 })
 
-MTRK({
+module.exports = {
   cmd: "mute",
   desc: "mute a user or a sticker",
   fromMe: true,
@@ -577,7 +577,7 @@ MTRK({
 })
 
 
-MTRK({
+module.exports = {
   cmd: "unmute",
   desc: "unmute a user or sticker",
   fromMe: true,
@@ -613,7 +613,7 @@ MTRK({
 })
 
 
-MTRK({
+module.exports = {
   on: "all",
   fromMe: false
 }, async (m) => {
