@@ -11,7 +11,7 @@ const yts = require("yt-search")
 const { Sticker, StickerTypes } = require("wa-sticker-formatter");
 
 module.exports = {
-cmd: "apk",
+name: "apk",
   desc: "download an andriod app",
   type: "downloader",
   fromMe: wtype,
@@ -45,7 +45,7 @@ cmd: "apk",
 
 
 module.exports = {
-cmd: "apksearch",
+name: "apksearch",
   desc: "search apk and download",
   fromMe: wtype,
   type: "search",
@@ -97,7 +97,7 @@ return await m.send({
 })
 
 module.exports = {
-  cmd: "subtitle",
+  name: "subtitle",
   desc: "Download English subtitle for a movie",
   type: "downloader",
   fromMe: wtype,
@@ -137,7 +137,7 @@ ${config().CAPTION}`;
 });
 
 module.exports = {
-cmd: "subtitlesearch|subtitles",
+name: "subtitlesearch|subtitles",
   desc: "Search subtitles from SubtitleCat",
   fromMe: wtype,
   type: "search",
@@ -202,7 +202,7 @@ cmd: "subtitlesearch|subtitles",
 
 
 module.exports = {
-        cmd: "ytv|ytmp4",
+        name: "ytv|ytmp4",
         desc: "download a YouTube video with its link",
         type: "downloader",
         fromMe: wtype,
@@ -247,7 +247,7 @@ module.exports = {
 
 
 module.exports = {
-        cmd: "yta|ytmp3",
+        name: "yta|ytmp3",
         desc: "downloads YouTube audio with its link",
         fromMe: wtype,
         type: "downloader",
@@ -291,7 +291,7 @@ try {
 )
 
 module.exports = {
-        cmd: "video|ytvideo",
+        name: "video|ytvideo",
         desc: "downloads and send video based on the title given",
         fromMe: wtype,
         type: "downloader",
@@ -321,7 +321,7 @@ m.react("")
 })
 
 module.exports = {
-        cmd: "play|music",
+        name: "play|music",
         desc: "downloads and send audio based on the title given",
         fromMe: wtype,
         type: "downloader",
@@ -354,7 +354,8 @@ module.exports = {
        return m.send(`an error occured: ${err}`)
 }
 })
-module.exports = {       cmd: "videodoc|ytvideodoc",
+module.exports = {      
+  name: "videodoc|ytvideodoc",
         desc: "downloads and send video(document) based on the title given",
         fromMe: wtype,
         type: "downloader",
@@ -383,8 +384,8 @@ m.react("")
         }
 })
 
-MTRK({
-        cmd: "playdoc|musicdoc",
+module.exports = {
+        name: "playdoc|musicdoc",
         desc: "downloads and send audio from YouTube as doc",
         fromMe: wtype,
         type: "downloader",
@@ -421,7 +422,7 @@ MTRK({
 })
 
 module.exports = {
-        cmd: "ytvdoc|ytmp4doc",
+        name: "ytvdoc|ytmp4doc",
         desc: "download a YouTube video with its link and send as document",
         type: "downloader",
         fromMe: wtype,
@@ -464,7 +465,7 @@ module.exports = {
 })
 
 module.exports = {
-        cmd: "ytadoc|ytmp3doc",
+        name: "ytadoc|ytmp3doc",
         desc: "downloads YouTube audio with its link",
         fromMe: wtype,
         type: "downloader",
@@ -507,7 +508,7 @@ try {
 })
 
 module.exports = {
-        cmd: "tt|tiktok",
+        name: "tt|tiktok",
         desc: "downloads tiktok videos using the link given",
         fromMe: wtype,
         type: "downloader",
@@ -550,7 +551,7 @@ module.exports = {
 })
 
 module.exports = {
-        cmd: "tik-img|tt-img",
+        name: "tik-img|tt-img",
         desc: "downloads tiktok images using the link given",
         fromMe: wtype,
         type: "downloader",
@@ -584,7 +585,7 @@ module.exports = {
 });
 
 module.exports = {
-        cmd: "twitter|xdl",
+        name: "twitter|xdl",
         desc: "downloads Twitter/X video/pic",
         fromMe: wtype,
         type: "downloader",
@@ -612,7 +613,7 @@ module.exports = {
 })
 
 module.exports = {
-        cmd: "fb|facebook",
+        name: "fb|facebook",
         desc: "downloads Facebook videos",
         fromMe: wtype,
         type: "downloader",
@@ -654,7 +655,7 @@ module.exports = {
 });
 
 module.exports = {
-        cmd: "insta|ig",
+        name: "insta|ig",
         desc: "downloads Instagram videos/images",
         fromMe: wtype,
         type: "downloader",
@@ -683,7 +684,7 @@ var link = links.find(url => igregex.test(url));
 })
 
 module.exports = {
-        cmd: "mediafire",
+        name: "mediafire",
         desc: "downloads mediafire links",
         fromMe: wtype,
         type: "downloader",
@@ -722,7 +723,7 @@ ${config().CAPTION}`
 
 
 MTRK({
-  cmd: "gitclone|gitdl",
+  name: "gitclone|gitdl",
   desc: "download the zip file of a repo link",
   fromMe: wtype,
   type: "downloader",
@@ -750,8 +751,8 @@ if (!lik) return await m.send("*provide a repo link!*")
 })
 
 
-MTRK({
-        cmd: "pint|pinterest",
+module.exports = {
+        name: "pint|pinterest",
         desc: "downloads Pinterest videos/images",
         fromMe: wtype,
         type: "downloader",
