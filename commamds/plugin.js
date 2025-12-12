@@ -14,7 +14,7 @@ const path = require("path")
 const { kord, wtype, storeData, getData, isUrl, extractUrlsFromString, sleep } = require("../core")
 
 module.exports = {
-  cmd: "plugin|install",
+  name: "plugin|install",
   desc: "install plugin from url",
   fromMe: true,
   type: "plugins"
@@ -82,7 +82,7 @@ const arr = await extractUrlsFromString(input)
 })
 
 module.exports = {
-  cmd: "remove|uninstall",
+  name: "remove|uninstall",
   desc: "remove external plugin by name or url",
   fromMe: true,
   type: "plugins"
@@ -120,7 +120,7 @@ let toRemove = plugins.find(p => p.name === input || p.url === norm)
 })
 
 module.exports = {
-cmd: "plugins",
+name: "plugins",
   desc: "list installed plugins",
   fromMe: true,
   type: "plugins"
