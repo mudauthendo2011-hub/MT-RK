@@ -29,7 +29,7 @@ const getImageUrl = async (m) => {
 
 
 module.exports = {
-        cmd: "remini|upscale|hd",
+        name: "remini|upscale|hd",
         desc: "increase the quality of an image(pixelcut)",
         fromMe: wtype,
         type: "image"
@@ -50,7 +50,7 @@ module.exports = {
 
 
 module.exports = {
-        cmd: "gfx|gfx1",
+        name: "gfx|gfx1",
         desc: "create gfx image",
         fromMe: wtype,
         type: "image"
@@ -70,7 +70,7 @@ module.exports = {
 )
 
 module.exports = {
-        cmd: "gfx2",
+        name: "gfx2",
         desc: "create gfx2 image",
         fromMe: wtype,
         type: "image"
@@ -90,7 +90,7 @@ module.exports = {
 
 
 module.exports = {
-        cmd: "gfx3",
+        name: "gfx3",
         desc: "create gfx3 image",
         fromMe: wtype,
         type: "image"
@@ -110,7 +110,7 @@ module.exports = {
 
 
 module.exports = {
-        cmd: "gfx4",
+        name: "gfx4",
         desc: "create gfx4 image",
         fromMe: wtype,
         type: "image"
@@ -130,7 +130,7 @@ module.exports = {
 
 
 module.exports = {
-        cmd: "gfx5",
+        name: "gfx5",
         desc: "create gfx5 image with three texts",
         fromMe: wtype,
         type: "image"
@@ -151,7 +151,7 @@ module.exports = {
 
 
 module.exports = {
-        cmd: "gfx6",
+        name: "gfx6",
         desc: "create gfx6 image with three texts",
         fromMe: wtype,
         type: "image"
@@ -172,7 +172,7 @@ module.exports = {
 
 
 module.exports = {
-        cmd: "gfx7",
+        name: "gfx7",
         desc: "create gfx7 image",
         fromMe: wtype,
         type: "image"
@@ -192,7 +192,7 @@ module.exports = {
 
 
 module.exports = {
-        cmd: "gfx8",
+        name: "gfx8",
         desc: "create gfx8 image",
         fromMe: wtype,
         type: "image"
@@ -212,7 +212,7 @@ module.exports = {
 
 
 module.exports = {
-        cmd: "gfx9",
+        name: "gfx9",
         desc: "create gfx9 image with single text",
         fromMe: wtype,
         type: "image"
@@ -231,7 +231,7 @@ module.exports = {
 
 
 module.exports = {
-        cmd: "gfx10",
+        name: "gfx10",
         desc: "create gfx10 image with single text",
         fromMe: wtype,
         type: "image"
@@ -249,7 +249,7 @@ module.exports = {
 )
 
 module.exports = {
-        cmd: "gfx11",
+        name: "gfx11",
         desc: "create gfx11 image with single text",
         fromMe: wtype,
         type: "image"
@@ -268,7 +268,7 @@ module.exports = {
 
 
 module.exports = {
-        cmd: "gfx12",
+        name: "gfx12",
         desc: "create gfx12 image with single text",
         fromMe: wtype,
         type: "image"
@@ -286,7 +286,7 @@ module.exports = {
 )
 
 module.exports = {
-        cmd: "carbon",
+        name: "carbon",
         desc: "create carbon image from code",
         fromMe: wtype,
         type: "image-meme",
@@ -311,7 +311,7 @@ module.exports = {
 )
 
 module.exports = {
-        cmd: "wanted",
+        name: "wanted",
         desc: "create mock wanted poster of replied user or pic",
         fromMe: wtype,
         type: "image-meme",
@@ -334,7 +334,7 @@ module.exports = {
 })
 
 module.exports = {
-        cmd: "wasted",
+        name: "wasted",
         desc: "create GTA wasted effect on replied user or pic",
         fromMe: wtype,
         type: "image-meme",
@@ -357,7 +357,7 @@ module.exports = {
 })
 
 module.exports = {
-        cmd: "rainbow",
+        name: "rainbow",
         desc: "apply rainbow filter to replied user or pic",
         fromMe: wtype,
         type: "image-meme",
@@ -380,7 +380,7 @@ module.exports = {
 })
 
 module.exports = {
-        cmd: "trigger-meme",
+        name: "trigger-meme",
         desc: "create triggered meme of replied user or pic",
         fromMe: wtype,
         type: "image-meme",
@@ -403,7 +403,7 @@ module.exports = {
 })
 
 module.exports = {
-        cmd: "rip-meme",
+        name: "rip-meme",
         desc: "create RIP meme of replied user or pic",
         fromMe: wtype,
         type: "image-meme",
@@ -426,7 +426,7 @@ module.exports = {
 })
 
 module.exports = {
-        cmd: "mnm",
+        name: "mnm",
         desc: "create M&M candy effect with replied user or pic",
         fromMe: wtype,
         type: "image-meme",
@@ -449,7 +449,7 @@ module.exports = {
 })
 
 module.exports = {
-        cmd: "jail",
+        name: "jail",
         desc: "put replied user or pic behind bars",
         fromMe: wtype,
         type: "image-meme",
@@ -472,7 +472,7 @@ module.exports = {
 })
 
 module.exports = {
-        cmd: "invert",
+        name: "invert",
         desc: "invert colors of replied user or pic",
         fromMe: wtype,
         type: "image",
@@ -496,7 +496,7 @@ module.exports = {
 
 
 module.exports = {
-  cmd: "naturewlp",
+  name: "naturewlp",
   desc: "sends slides of nature wallpapers",
   fromMe: wtype,
   type: "image",
