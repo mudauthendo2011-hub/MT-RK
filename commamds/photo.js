@@ -11,7 +11,7 @@ const { MTRK, config, prefix, wtype, textMaker } = require("../core");
 const fetch = require('node-fetch');
 
 const createCmd = (name, effectUrl, emoji, description, options = {}) => {
-    MTRK({
+    module.exports = {
         cmd: name.toLowerCase(),
         desc: `Creates ${description} using EpPhoto360`,
         type: "textmaker",
