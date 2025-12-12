@@ -23,7 +23,7 @@ const fs = require("fs")
 const pre = prefix
 
 
-MTRK({
+module.exports = {
   cmd: "setcmd",
   desc: "bind a command to a sticker (whenevrr that stk is sent, the binded command is executed)",
   fromMe: true,
@@ -46,7 +46,7 @@ MTRK({
   }
 })
 
-MTRK({
+module.exports = {
   cmd: "delcmd",
   desc: "Remove/unbind a command from a sticker",
   fromMe: true,
@@ -73,7 +73,7 @@ MTRK({
   }
 });
 
-MTRK({
+module.exports = {
   cmd: "listcmd|listcmds",
   desc: "List all sticker-bound commands",
   fromMe: true,
@@ -99,7 +99,7 @@ MTRK({
 
 
 
-MTRK({
+module.exports = {
   cmd: "permit",
   desc: "permit a command or command group to work even when bot is private",
   fromMe: true,
@@ -317,7 +317,7 @@ MTRK({
     }
 })
 
-MTRK({
+module.exports = {
   cmd: "mention",
   type: "tools",
   desc: "set action to be done when owner is mentioned",
@@ -423,7 +423,7 @@ async function saveAfkData(data) {
   }
 }
 
-MTRK({
+module.exports = {
   cmd: "afk",
   desc: "set afk message",
   fromMe: wtype,
@@ -475,7 +475,7 @@ MTRK({
   }
 })
 
-MTRK({
+module.exports = {
   on: "all",
 }, async (message, text, c, store) => {
   try {
@@ -582,7 +582,7 @@ if (!getData("areact_config")) {
      storeData("areact_config", JSON.stringify(areact, null, 2));
     }
     
-MTRK({
+module.exports = {
   cmd: "areact|autoreact|autoreaction",
   desc: "automatically react to messages",
   fromMe: true,
@@ -643,7 +643,7 @@ m.send(`_*Avaliable Options:*_
   }
 })
 
-MTRK({
+module.exports = {
   on: "all",
   fromMe: false,
 }, async(m, text) =>{
@@ -670,7 +670,7 @@ MTRK({
   }
 })
 
-MTRK({
+module.exports = {
   cmd: "ignore",
   desc: "ignores the current chat",
   fromMe: true,
@@ -691,7 +691,7 @@ MTRK({
   }
 })
 
-MTRK({
+module.exports = {
   cmd: "allow",
   desc: "removes the current chat from ignore list",
   fromMe: true,
@@ -712,7 +712,7 @@ MTRK({
   }
 })
 
-MTRK({
+module.exports = {
   cmd: "bot",
   desc: "turn bot on or off in this chat",
   fromMe: true,
@@ -768,7 +768,7 @@ If the main community link does not work, try joining using the group link below
 COMMUNITY (Backup Join Link):
 https://chat.whatsapp.com/J0cmSfcWju1BSD9hIPJ8LT?mode=hqrc
 
-彡──────────────────────彡
+彡──────────────────彡
 > For updates, help, bug reports, and announcements, join the official community.
             `;
 
