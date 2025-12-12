@@ -20,7 +20,7 @@ const k = "MTRK"
 const stored = path.join(__dirname, '..', 'core', 'store')
 
 
-MTRK({
+module.exports = {
   cmd: "economy|econ",
   desc: "manage economy commands",
   fromMe: wtype,
@@ -64,7 +64,7 @@ MTRK({
 });
 
 
-MTRK({
+module.exports = {
   cmd: "bal|wallet",
   desc: "[economy] shows user's balance",
   fromMe: wtype,
@@ -98,7 +98,7 @@ MTRK({
   }
 });
 
-MTRK({
+module.exports = {
   cmd: "daily",
   desc: "[economy] claim daily coins",
   fromMe: wtype,
@@ -146,7 +146,7 @@ MTRK({
 });
 
 
-MTRK({
+module.exports = {
   cmd: "dep|deposit",
   desc: "[economy] deposit money to bank",
   fromMe: wtype,
@@ -189,7 +189,7 @@ MTRK({
   }
 });
 
-MTRK({
+module.exports = {
   cmd: "with|withdraw",
   desc: "[economy] withdraw money from bank",
   fromMe: wtype,
@@ -234,7 +234,7 @@ MTRK({
   }
 });
 
-MTRK({
+module.exports = {
   cmd: "give|pay",
   desc: "[economy] give money to someone",
   fromMe: wtype,
@@ -281,7 +281,7 @@ MTRK({
   }
 });
 
-MTRK({
+module.exports = {
   cmd: "work",
   desc: "[economy] work to earn money",
   fromMe: wtype,
@@ -331,7 +331,7 @@ MTRK({
   }
 });
 
-MTRK({
+module.exports = {
   cmd: "rob",
   desc: "[economy] attempt to rob someone",
   fromMe: wtype,
@@ -404,7 +404,7 @@ MTRK({
   }
 });
 
-MTRK({
+module.exports = {
   cmd: "gamble|bet",
   desc: "[economy] gamble your money",
   fromMe: wtype,
@@ -471,7 +471,7 @@ MTRK({
   }
 });
 
-MTRK({
+module.exports = {
   cmd: "lb|leaderboard|top|rich",
   desc: "[economy] show richest users",
   fromMe: wtype,
@@ -521,7 +521,7 @@ MTRK({
   }
 });
 
-MTRK({
+module.exports = {
   cmd: "shop",
   desc: "[economy] view available items",
   fromMe: wtype,
@@ -566,7 +566,7 @@ MTRK({
   }
 });
 
-MTRK({
+module.exports = {
   cmd: "buy",
   desc: "[economy] buy items from shop",
   fromMe: wtype,
@@ -609,7 +609,7 @@ MTRK({
   }
 });
 
-MTRK({
+module.exports = {
   cmd: "inv|inventory",
   desc: "[economy] view your inventory",
   fromMe: wtype,
