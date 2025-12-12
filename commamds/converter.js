@@ -21,7 +21,7 @@ const {
    fromBuffer
 } = require('file-type')
 
-MTRK({
+module.exports = {
         cmd: "sticker|s|stk",
         desc: "converts replied media to sticker",
         fromMe: wtype,
@@ -55,7 +55,7 @@ MTRK({
   })
 
 
-MTRK({
+module.exports = {
 cmd: "photo|toimg",
         desc: "convert sticker to image",
         fromMe: wtype,
@@ -72,7 +72,7 @@ cmd: "photo|toimg",
   }
 })
 
-MTRK({
+module.exports = {
 cmd: "ptv",
         desc: "converts video to ptv message",
         fromMe: wtype,
@@ -88,7 +88,7 @@ cmd: "ptv",
   }
 })
 
-MTRK({
+module.exports = {
         cmd: "mp4",
         desc: "converts sticker to video",
         fromMe: wtype,
@@ -105,7 +105,7 @@ MTRK({
   }
 })
 
-MTRK({
+module.exports = {
         cmd: "gif",
         desc: "converts sticker to gif",
         fromMe: wtype,
@@ -122,7 +122,7 @@ MTRK({
   }
 })
 
-MTRK({
+module.exports = {
   cmd: "tomp3|toaudio",
   desc: "convert video to audio",
   fromMe: wtype,
@@ -137,7 +137,7 @@ MTRK({
   }
 })
 
-MTRK({
+module.exports = {
 cmd: "black",
   desc: "converts mp3 to black video",
   fromMe: wtype,
@@ -186,7 +186,7 @@ cmd: "black",
 })
 
 
-MTRK({
+module.exports = {
 cmd: "roundstk|round",
   desc: "create or convert sticker to round frame type",
   fromMe: wtype,
@@ -229,7 +229,7 @@ cmd: "roundstk|round",
   }
 })
 
-MTRK({
+module.exports = {
 cmd: "circlestk|circle",
   desc: "create or convert sticker to circle frame type",
   fromMe: wtype,
@@ -273,7 +273,7 @@ cmd: "circlestk|circle",
 })
 
 
-MTRK({
+module.exports = {
   cmd: "take|steal",
   desc: "change the data of a sticker or audio",
   fromMe: wtype,
@@ -344,7 +344,7 @@ MTRK({
   }
 })
 
-MTRK({
+module.exports = {
 cmd: "exif",
   desc: "get exif data of a sticker",
   fromMe: wtype,
@@ -366,7 +366,7 @@ cmd: "exif",
   }
 })
 
-MTRK({
+module.exports = {
 cmd: "aitts",
   desc: "tts ai with id split with |",
   fromMe: wtype,
@@ -391,7 +391,7 @@ cmd: "aitts",
   }
 })
 
-MTRK({
+module.exports = {
 cmd: "doc",
   desc: "converts media to document",
   fromMe: wtype,
@@ -410,7 +410,7 @@ cmd: "doc",
   }
 })
 
-MTRK({
+module.exports = {
 cmd: "tovv",
   desc: "convert media to viewonce",
   fromMe: wtype,
@@ -437,7 +437,7 @@ cmd: "tovv",
   }
 })
 
-MTRK({
+module.exports = {
 cmd: "bass",
   desc: "apply bass effect to audio",
   fromMe: wtype, 
@@ -461,7 +461,7 @@ cmd: "bass",
   }
 })
 
-MTRK({
+module.exports = {
   cmd: "blown",
   desc: "apply blown effect to audio",
   fromMe: wtype, 
@@ -484,7 +484,7 @@ try {
 }
 })
 
-MTRK({
+module.exports = {
   cmd: "deep",
   desc: "apply deep effect to audio",
   fromMe: wtype, 
@@ -503,7 +503,7 @@ try {
 }
 })
 
-MTRK({
+module.exports = {
   cmd: "earrape",
   desc: "apply extremely loud effect to audio",
   fromMe: wtype, 
@@ -522,7 +522,7 @@ try {
 }
 })
 
-MTRK({
+module.exports = {
   cmd: "fast",
   desc: "speed up audio",
   fromMe: wtype, 
@@ -541,7 +541,7 @@ try {
 }
 })
 
-MTRK({
+module.exports = {
   cmd: "fat",
   desc: "apply fat effect to audio",
   fromMe: wtype, 
@@ -560,7 +560,7 @@ try {
 }
 })
 
-MTRK({
+module.exports = {
   cmd: "nightcore",
   desc: "apply nightcore effect to audio",
   fromMe: wtype, 
@@ -579,7 +579,7 @@ try {
 }
 })
 
-MTRK({
+module.exports = {
   cmd: "reverse",
   desc: "reverse audio playback",
   fromMe: wtype, 
@@ -598,7 +598,7 @@ try {
 }
 })
 
-kord({
+module.exports = {
   cmd: "squirrel",
   desc: "apply squirrel voice effect to audio",
   fromMe: wtype, 
@@ -617,7 +617,7 @@ try {
 }
 })
 
-MTRK({
+module.exports = {
   cmd: "robot",
   desc: "apply robot voice effect to audio",
   fromMe: wtype, 
@@ -636,7 +636,7 @@ try {
 }
 })
 
-MTRK({
+module.exports = {
   cmd: "slow",
   desc: "slow down audio",
   fromMe: wtype, 
@@ -655,7 +655,7 @@ try {
 }
 })
 
-MTRK({
+module.exports = {
   cmd: "smooth",
   desc: "apply smooth effect to audio",
   fromMe: wtype, 
@@ -674,7 +674,7 @@ try {
 }
 })
 
-MTRK({
+module.exports = {
   cmd: "chipmunk",
   desc: "apply chipmunk voice effect to audio",
   fromMe: wtype, 
@@ -693,7 +693,7 @@ try {
 }
 })
 
-MTRK({
+module.exports = {
   cmd: "tremolo",
   desc: "apply tremolo effect to audio",
   fromMe: wtype, 
@@ -712,7 +712,7 @@ try {
 }
 })
 
-MTRK({
+module.exports = {
   cmd: "vibrato",
   desc: "apply vibrato effect to audio",
   fromMe: wtype, 
@@ -731,7 +731,7 @@ try {
 }
 })
 
-MTRK({
+module.exports = {
   cmd: "8d",
   desc: "apply 8D surround effect to audio",
   fromMe: wtype, 
@@ -750,7 +750,7 @@ try {
 }
 })
 
-MTRK({
+module.exports = {
   cmd: "echo",
   desc: "apply echo effect to audio",
   fromMe: wtype, 
@@ -769,7 +769,7 @@ try {
 }
 })
 
-MTRK({
+module.exports = {
   cmd: "flanger",
   desc: "apply flanger effect to audio",
   fromMe: wtype, 
