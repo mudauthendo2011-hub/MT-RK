@@ -19,7 +19,7 @@ const { MTRK,
 } = require("../core")
 const axios = require("axios")
 
-MTRK({
+module.exports = {
 cmd: "quote",
   desc: "get random quote",
   fromMe: wtype,
@@ -38,7 +38,7 @@ cmd: "quote",
   }
 })
 
-MTRK({
+module.exports = {
 cmd: "fact",
   desc: "get random fact",
   fromMe: wtype,
@@ -56,7 +56,7 @@ cmd: "fact",
   }
 })
 
-MTRK({
+module.exports = {
 cmd: "q|quotely",
   desc: "makes sticker of replied messaged",
   fromMe: wtype,
@@ -101,7 +101,7 @@ cmd: "q|quotely",
   }
 })
 
-MTRK({
+module.exports = {
 cmd: "ebinary|ebin",
   desc: "encode text to binary",
   fromMe: wtype,
@@ -117,7 +117,7 @@ cmd: "ebinary|ebin",
   }
 })
 
-MTRK({
+module.exports = {
 cmd: "dbinary|dbin",
   desc: "decode text to binary",
   fromMe: wtype,
@@ -133,7 +133,7 @@ cmd: "dbinary|dbin",
   }
 })
 
-MTRK({
+module.exports = {
 cmd: "pick",
   desc: "pick a random person in group",
   fromMe: wtype,
@@ -152,7 +152,7 @@ cmd: "pick",
   }
 })
 
-MTRK({
+module.exports = {
 cmd: "pickupl|pickupline",
   desc: "get pickupline",
   fromMe: wtype,
@@ -170,7 +170,7 @@ cmd: "pickupl|pickupline",
   }
 })
 
-MTRK({
+module.exports = {
 cmd: "breakupl|breakupline",
   desc: "get breakupline",
   fromMe: wtype,
@@ -189,7 +189,7 @@ cmd: "breakupl|breakupline",
 })
  
  
- MTRK({
+ module.exports = {
   cmd: "insult|roast",
   desc: "sends an insult message to replied/mentioned user",
   fromMe: wtype,
@@ -209,7 +209,7 @@ cmd: "breakupl|breakupline",
   }
 })
 
-MTRK({
+module.exports = {
   cmd: "emojimix|emix",
   desc: "mix two emojis into a sticker",
   fromMe: wtype,
@@ -236,7 +236,7 @@ MTRK({
 })
 
 
-MTRK({
+module.exports = {
   cmd: "addnote|writenote|savenote",
   desc: "write note to db",
   fromMe: true,
@@ -254,7 +254,7 @@ MTRK({
   }
 })
 
-MTRK({
+module.exports = {
   cmd: "delnote|removenote|deletenote",
   desc: "remove note from db",
   fromMe: true,
@@ -274,7 +274,7 @@ MTRK({
   }
 })
 
-MTRK({
+module.exports = {
   cmd: "allnotes|notes|getnotes",
   desc: "get all saved notes",
   fromMe: true,
@@ -296,7 +296,7 @@ MTRK({
   }
 })
 
-MTRK({
+module.exports = {
   cmd: "getnote|readnote|note|nt",
   desc: "get specific note by name",
   fromMe: true,
@@ -316,7 +316,7 @@ MTRK({
   }
 })
 
-MTRK({
+module.exports = {
   cmd: "delallnote|delnotes|clearallnotes",
   desc: "delete all notes from db",
   fromMe: true,
