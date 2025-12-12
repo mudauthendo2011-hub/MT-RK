@@ -12,7 +12,7 @@ const fetch = require('node-fetch');
 
 const createCmd = (name, effectUrl, emoji, description, options = {}) => {
     module.exports = {
-        cmd: name.toLowerCase(),
+        name: name.toLowerCase(),
         desc: `Creates ${description} using EpPhoto360`,
         type: "textmaker",
         fromMe: wtype,
