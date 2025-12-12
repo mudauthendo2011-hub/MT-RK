@@ -21,7 +21,7 @@ const stored = path.join(__dirname, '..', 'core', 'store')
 
 
 module.exports = {
-  cmd: "economy|econ",
+  name: "economy|econ",
   desc: "manage economy commands",
   fromMe: wtype,
   type: "economy"
@@ -65,7 +65,7 @@ module.exports = {
 
 
 module.exports = {
-  cmd: "bal|wallet",
+  name: "bal|wallet",
   desc: "[economy] shows user's balance",
   fromMe: wtype,
   type: "economy",
@@ -99,7 +99,7 @@ module.exports = {
 });
 
 module.exports = {
-  cmd: "daily",
+  name: "daily",
   desc: "[economy] claim daily coins",
   fromMe: wtype,
   type: "economy",
@@ -147,7 +147,7 @@ module.exports = {
 
 
 module.exports = {
-  cmd: "dep|deposit",
+  name: "dep|deposit",
   desc: "[economy] deposit money to bank",
   fromMe: wtype,
   type: "economy",
@@ -190,7 +190,7 @@ module.exports = {
 });
 
 module.exports = {
-  cmd: "with|withdraw",
+  name: "with|withdraw",
   desc: "[economy] withdraw money from bank",
   fromMe: wtype,
   type: "economy",
@@ -235,7 +235,7 @@ module.exports = {
 });
 
 module.exports = {
-  cmd: "give|pay",
+  name: "give|pay",
   desc: "[economy] give money to someone",
   fromMe: wtype,
   type: "economy",
@@ -282,7 +282,7 @@ module.exports = {
 });
 
 module.exports = {
-  cmd: "work",
+  name: "work",
   desc: "[economy] work to earn money",
   fromMe: wtype,
   type: "economy",
@@ -332,7 +332,7 @@ module.exports = {
 });
 
 module.exports = {
-  cmd: "rob",
+  name: "rob",
   desc: "[economy] attempt to rob someone",
   fromMe: wtype,
   type: "economy",
@@ -405,7 +405,7 @@ module.exports = {
 });
 
 module.exports = {
-  cmd: "gamble|bet",
+name: "gamble|bet",
   desc: "[economy] gamble your money",
   fromMe: wtype,
   type: "economy",
@@ -472,7 +472,7 @@ module.exports = {
 });
 
 module.exports = {
-  cmd: "lb|leaderboard|top|rich",
+  name: "lb|leaderboard|top|rich",
   desc: "[economy] show richest users",
   fromMe: wtype,
   type: "economy",
@@ -522,7 +522,7 @@ module.exports = {
 });
 
 module.exports = {
-  cmd: "shop",
+  name: "shop",
   desc: "[economy] view available items",
   fromMe: wtype,
   type: "economy",
@@ -567,7 +567,7 @@ module.exports = {
 });
 
 module.exports = {
-  cmd: "buy",
+  name: "buy",
   desc: "[economy] buy items from shop",
   fromMe: wtype,
   type: "economy",
@@ -610,7 +610,7 @@ module.exports = {
 });
 
 module.exports = {
-  cmd: "inv|inventory",
+  name: "inv|inventory",
   desc: "[economy] view your inventory",
   fromMe: wtype,
   type: "economy",
