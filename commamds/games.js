@@ -9,7 +9,7 @@
  
 const { MTRK, isAdmin, prefix, TicTacToe, WCG, wtype } = require("../core")
 
-MTRK({
+module.exports = {
   cmd: "delttt",
   desc: "delete TicTacToe running game.",
   fromMe: wtype,
@@ -30,7 +30,7 @@ MTRK({
   }
 })
 
-MTRK({
+module.exports = {
   cmd: "ttt",
   desc: "Play TicTacToe",
   fromMe: wtype,
@@ -70,7 +70,7 @@ MTRK({
   }
 })
 
-MTRK({
+module.exports = {
   on: "text",
   fromMe: false
 }, async (m, text) => {
@@ -369,7 +369,7 @@ All players were inactive`)
   }
 }
 
-MTRK({
+module.exports = {
   cmd: 'wcg',
   desc: 'start a Word Chain Game',
   fromMe: wtype,
@@ -475,7 +475,7 @@ ${playerList}
   }
 })
 
-MTRK({
+module.exports = {
   cmd: 'delwcg',
   desc: 'delete running WCG game',
   fromMe: wtype,
@@ -519,7 +519,7 @@ ${game.wordsCount ? `📊 *Final Stats:*
   }
 })
 
-MTRK({
+module.exports = {
   on: 'text',
   fromMe: false
 }, async (m, text) => {
