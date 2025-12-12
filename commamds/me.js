@@ -28,7 +28,7 @@ const fs = require('fs')
 const { warn } = require("../core/db")
 
 module.exports = {
-cmd: 'ping',
+name: 'ping',
   desc: 'check the bot ping',
   react: "🙂‍↔️",
   fromMe: wtype,
@@ -48,7 +48,7 @@ cmd: 'ping',
 
 
 module.exports = {
-  cmd: "ban",
+  name: "ban",
   desc: "bans a user from using the bot",
   fromMe: true,
   type: "bot"
@@ -89,7 +89,7 @@ module.exports = {
 })
 
 module.exports = {
-  cmd: "unban",
+  name: "unban",
   desc: "unbans an already banned user",
   fromMe: true,
   type: "bot"
@@ -129,7 +129,7 @@ module.exports = {
   }
 })
 module.exports = {
-cmd: "banlist",
+name: "banlist",
   desc: "shows all banned users",
   fromMe: true,
   type: "bot"
@@ -151,7 +151,7 @@ cmd: "banlist",
 })
 
 module.exports = {
-cmd: 'uptime',
+name: 'uptime',
   desc: 'checks the bot\'s uptime',
   react: '💨',
   fromMe: wtype,
@@ -167,7 +167,7 @@ cmd: 'uptime',
 })
 
 module.exports = {
-  cmd: 'quoted',
+  name: 'quoted',
   desc: 'resends the a replied messges of the quoted msg',
   fromMe: wtype,
   type: 'tools'
@@ -188,7 +188,7 @@ module.exports = {
 })
 
 module.exports = {
-cmd: "list",
+name: "list",
   desc: "shows the list of available comamnds and their description",
   react: "☯️",
   fromMe: wtype,
@@ -215,7 +215,7 @@ return m.send(list)
 const pm2 = require('pm2')
 
 module.exports = {
-  cmd: "restart|reboot",
+  name: "restart|reboot",
   desc: "restart ths bot",
   fromMe: true,
   type: "process",
@@ -237,7 +237,7 @@ module.exports = {
 })
 
 module.exports = {
-  cmd: "shutdown",
+  name: "shutdown",
   desc: "shut the bot down (you'll have to restart on server)",
   fromMe: true,
   type: "process",
@@ -259,7 +259,7 @@ module.exports = {
 })
 
 module.exports = {
-  cmd: "runtime",
+  name: "runtime",
   desc: "get runtime of bot with cool display",
   fromMe: wtype,
   type: "bot",
@@ -304,7 +304,7 @@ module.exports = {
 });
 
 module.exports = {
-  cmd: "p-status",
+  name: "p-status",
   desc: "checks process status",
   fromMe: true,
   type: "process"
@@ -373,7 +373,7 @@ module.exports = {
 
 
 module.exports = {
-  cmd: "stats",
+  name: "stats",
   desc: "Show bot performance stats",
   fromMe: wtype,
   type: "bot"
@@ -518,7 +518,7 @@ module.exports = {
 })
 
 module.exports = {
-cmd: "owner|creater",
+name: "owner|creater",
   desc: "sends owner contact",
   fromMe: wtype,
   type: "bot"
@@ -546,7 +546,7 @@ END:VCARD`
 })
 
 module.exports = {
-  cmd: "repo|sc|script",
+  name: "repo|sc|script",
   desc: "send repository link of the bot",
   fromMe: wtype,
   type: "bot"
@@ -555,7 +555,7 @@ module.exports = {
     const msg =
 `╔═════《 𝗥𝗢𝗬𝗔𝗟 𝗥𝗘𝗣𝗢 》═════╗
 ╠ Link: https://github.com/mudauthendo2011-hub/MT-RK
-╠ Description: WhatsApp Bot built with Baileys (Royal Edition)
+╠ Description: this repo was made by royal)
 ╚═════════════════════════════╝`;
 
     return await m.send(msg);
@@ -566,7 +566,7 @@ module.exports = {
 });
 
 module.exports = {
-cmd: "update",
+name: "update",
     desc: "update bot",
     fromMe: true,
     type: "bot",
