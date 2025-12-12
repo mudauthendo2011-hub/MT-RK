@@ -10,7 +10,7 @@
 const { MTRK, isAdmin, prefix, TicTacToe, WCG, wtype } = require("../core")
 
 module.exports = {
-  cmd: "delttt",
+  name: "delttt",
   desc: "delete TicTacToe running game.",
   fromMe: wtype,
   type: "game",
@@ -31,7 +31,7 @@ module.exports = {
 })
 
 module.exports = {
-  cmd: "ttt",
+  name: "ttt",
   desc: "Play TicTacToe",
   fromMe: wtype,
   type: "game"
@@ -370,7 +370,7 @@ All players were inactive`)
 }
 
 module.exports = {
-  cmd: 'wcg',
+  name: 'wcg',
   desc: 'start a Word Chain Game',
   fromMe: wtype,
   type: 'game'
@@ -476,7 +476,7 @@ ${playerList}
 })
 
 module.exports = {
-  cmd: 'delwcg',
+  name: 'delwcg',
   desc: 'delete running WCG game',
   fromMe: wtype,
   type: 'game'
