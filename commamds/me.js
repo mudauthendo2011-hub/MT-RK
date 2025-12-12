@@ -27,7 +27,7 @@ const path = require('path')
 const fs = require('fs')
 const { warn } = require("../core/db")
 
-MTRK({
+module.exports = {
 cmd: 'ping',
   desc: 'check the bot ping',
   react: "🙂‍↔️",
@@ -47,7 +47,7 @@ cmd: 'ping',
 });
 
 
-MTRK({
+module.exports = {
   cmd: "ban",
   desc: "bans a user from using the bot",
   fromMe: true,
@@ -88,7 +88,7 @@ MTRK({
   }
 })
 
-MTRK({
+module.exports = {
   cmd: "unban",
   desc: "unbans an already banned user",
   fromMe: true,
@@ -128,7 +128,7 @@ MTRK({
     return await m.sendErr(e)
   }
 })
-MTRK({
+module.exports = {
 cmd: "banlist",
   desc: "shows all banned users",
   fromMe: true,
@@ -150,7 +150,7 @@ cmd: "banlist",
   }
 })
 
-MTRK({
+module.exports = {
 cmd: 'uptime',
   desc: 'checks the bot\'s uptime',
   react: '💨',
@@ -166,7 +166,7 @@ cmd: 'uptime',
   }
 })
 
-MTRK({
+module.exports = {
   cmd: 'quoted',
   desc: 'resends the a replied messges of the quoted msg',
   fromMe: wtype,
@@ -187,7 +187,7 @@ MTRK({
     }
 })
 
-MTRK({
+module.exports = {
 cmd: "list",
   desc: "shows the list of available comamnds and their description",
   react: "☯️",
@@ -214,7 +214,7 @@ return m.send(list)
 
 const pm2 = require('pm2')
 
-MTRK({
+module.exports = {
   cmd: "restart|reboot",
   desc: "restart ths bot",
   fromMe: true,
@@ -236,7 +236,7 @@ MTRK({
   }
 })
 
-MTRK({
+module.exports = {
   cmd: "shutdown",
   desc: "shut the bot down (you'll have to restart on server)",
   fromMe: true,
@@ -258,7 +258,7 @@ MTRK({
   }
 })
 
-MTRK({
+module.exports = {
   cmd: "runtime",
   desc: "get runtime of bot with cool display",
   fromMe: wtype,
@@ -303,7 +303,7 @@ MTRK({
   }
 });
 
-MTRK({
+module.exports = {
   cmd: "p-status",
   desc: "checks process status",
   fromMe: true,
@@ -372,7 +372,7 @@ MTRK({
 
 
 
-MTRK({
+module.exports = {
   cmd: "stats",
   desc: "Show bot performance stats",
   fromMe: wtype,
@@ -415,7 +415,7 @@ MTRK({
   }
 })
 
-MTRK({
+module.exports = {
   on: "all",
   fromMe: false,
 }, async (m, text) => {
@@ -470,7 +470,7 @@ MTRK({
   }
 })
 
-MTRK({
+module.exports = {
   on: "all",
   fromMe: false,
 }, async (m, text) => {
@@ -517,7 +517,7 @@ MTRK({
   }
 })
 
-MTRK({
+module.exports = {
 cmd: "owner|creater",
   desc: "sends owner contact",
   fromMe: wtype,
@@ -545,7 +545,7 @@ END:VCARD`
   }
 })
 
-MTRK({
+module.exports = {
   cmd: "repo|sc|script",
   desc: "send repository link of the bot",
   fromMe: wtype,
@@ -565,7 +565,7 @@ MTRK({
   }
 });
 
-MTRK({
+module.exports = {
 cmd: "update",
     desc: "update bot",
     fromMe: true,
