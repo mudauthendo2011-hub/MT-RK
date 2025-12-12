@@ -29,7 +29,7 @@ const ffmpeg = require('fluent-ffmpeg')
 const fs = require('fs')
 
 module.exports = {
-        cmd: "websearch|search",
+        name: "websearch|search",
         desc: "search the web based on given query",
         fromMe: wtype,
         react: "🔎",
@@ -61,7 +61,7 @@ module.exports = {
 
 
 module.exports = {
-        cmd: "img|image",
+        name: "img|image",
         desc: "search images based on query",
         fromMe: wtype,
         react: "🖼️",
@@ -90,7 +90,7 @@ module.exports = {
 })
 
 module.exports = {
-        cmd: "npm",
+        name: "npm",
         desc: "gives description of a given npm package",
         fromMe: wtype,
         react: "📦",
@@ -128,7 +128,7 @@ function sign(signString, accessSecret) {
         .toString('base64')
 }
 module.exports = {
-  cmd: "shazam|findaudio|find|identifyaudio",
+  name: "shazam|findaudio|find|identifyaudio",
   desc: "search for audio details of replied video/audio",
   fromMe: wtype,
   react: "🎶",
@@ -252,7 +252,7 @@ module.exports = {
 
 
 module.exports = {
-  cmd: "element",
+  name: "element",
   desc: "get info of a periodic element",
   fromMe: wtype,
   type: "tools",
