@@ -19,7 +19,7 @@ const { MTRK,
 const axios = require('axios') 
 
 module.exports = {
-  cmd: "openai",
+  name: "openai",
   desc: "chat with ai (openai gpt-5 nano)",
   fromMe: wtype,
   type: "ai",
@@ -35,7 +35,7 @@ module.exports = {
 })
 
 module.exports = {
-  cmd: "gpt",
+  name: "gpt",
   desc: "chat with ai (openai fast)",
   fromMe: wtype,
   type: "ai",
@@ -51,7 +51,7 @@ module.exports = {
 })
 
 module.exports = {
-  cmd: "gemini",
+  name: "gemini",
   desc: "chat with ai (gemini 2.5)",
   fromMe: wtype,
   type: "ai",
@@ -67,7 +67,7 @@ module.exports = {
 })
 
 module.exports = {
-  cmd: "aisearch",
+  name: "aisearch",
   desc: "chat with ai (gemini with google search)",
   fromMe: wtype,
   type: "ai",
@@ -83,7 +83,7 @@ module.exports = {
 })
 
 module.exports = {
-  cmd: "mistral",
+  name: "mistral",
   desc: "chat with ai (mistral small 3.2)",
   fromMe: wtype,
   type: "ai",
@@ -99,7 +99,7 @@ module.exports = {
 })
 
 module.exports = {
-  cmd: "deepseek",
+  name: "deepseek",
   desc: "chat with ai (deepseek v3.1 reasoning)",
   fromMe: wtype,
   type: "ai",
@@ -116,7 +116,7 @@ module.exports = {
 
 
 module.exports = {
-  cmd: "reasoning",
+  name: "reasoning",
   desc: "chat with ai (openai o4 mini reasoning)",
   fromMe: wtype,
   type: "ai",
@@ -132,7 +132,7 @@ module.exports = {
 })
 
 module.exports = {
-  cmd: "coder",
+  name: "coder",
   desc: "chat with ai (qwen coder)",
   fromMe: wtype,
   type: "ai",
@@ -148,7 +148,7 @@ module.exports = {
 })
 
 module.exports = {
-  cmd: "llama",
+  name: "llama",
   desc: "chat with ai (llama 3.1)",
   fromMe: wtype,
   type: "ai",
@@ -164,7 +164,7 @@ module.exports = {
 })
 
 module.exports = {
-  cmd: "bidara",
+  name: "bidara",
   desc: "chat with ai (nasa biomimetic designer)",
   fromMe: wtype,
   type: "ai",
@@ -357,7 +357,7 @@ module.exports = {
   }
 })
 
-MTRK({
+module.exports = {
   on: "text",
   fromMe: false,
 }, async (m, text) => {
@@ -408,7 +408,7 @@ MTRK({
 
 
 module.exports = {
-  cmd: "aitest",
+  name: "aitest",
   desc: "test AI connectivity",
   fromMe: true,
   type: "ai",
