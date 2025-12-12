@@ -56,7 +56,7 @@ module.exports = {
 
 
 module.exports = {
-cmd: "photo|toimg",
+name: "photo|toimg",
         desc: "convert sticker to image",
         fromMe: wtype,
         type: "converter",
@@ -73,7 +73,7 @@ cmd: "photo|toimg",
 })
 
 module.exports = {
-cmd: "ptv",
+name: "ptv",
         desc: "converts video to ptv message",
         fromMe: wtype,
         type: "converter",
@@ -89,7 +89,7 @@ cmd: "ptv",
 })
 
 module.exports = {
-        cmd: "mp4",
+        name: "mp4",
         desc: "converts sticker to video",
         fromMe: wtype,
         type: "converter",
@@ -106,7 +106,7 @@ module.exports = {
 })
 
 module.exports = {
-        cmd: "gif",
+        name: "gif",
         desc: "converts sticker to gif",
         fromMe: wtype,
         type: "converter",
@@ -123,7 +123,7 @@ module.exports = {
 })
 
 module.exports = {
-  cmd: "tomp3|toaudio",
+  name: "tomp3|toaudio",
   desc: "convert video to audio",
   fromMe: wtype,
   type: "converter",
@@ -138,7 +138,7 @@ module.exports = {
 })
 
 module.exports = {
-cmd: "black",
+name: "black",
   desc: "converts mp3 to black video",
   fromMe: wtype,
   type: "converter",
@@ -187,7 +187,7 @@ cmd: "black",
 
 
 module.exports = {
-cmd: "roundstk|round",
+name: "roundstk|round",
   desc: "create or convert sticker to round frame type",
   fromMe: wtype,
   type: "converter",
@@ -230,7 +230,7 @@ cmd: "roundstk|round",
 })
 
 module.exports = {
-cmd: "circlestk|circle",
+name: "circlestk|circle",
   desc: "create or convert sticker to circle frame type",
   fromMe: wtype,
   type: "converter",
@@ -274,7 +274,7 @@ cmd: "circlestk|circle",
 
 
 module.exports = {
-  cmd: "take|steal",
+  name: "take|steal",
   desc: "change the data of a sticker or audio",
   fromMe: wtype,
   type: "converter",
@@ -345,7 +345,7 @@ module.exports = {
 })
 
 module.exports = {
-cmd: "exif",
+name: "exif",
   desc: "get exif data of a sticker",
   fromMe: wtype,
   type: "converter",
@@ -367,7 +367,7 @@ cmd: "exif",
 })
 
 module.exports = {
-cmd: "aitts",
+name: "aitts",
   desc: "tts ai with id split with |",
   fromMe: wtype,
   type: "converter",
@@ -392,7 +392,7 @@ cmd: "aitts",
 })
 
 module.exports = {
-cmd: "doc",
+name: "doc",
   desc: "converts media to document",
   fromMe: wtype,
   type: "converter",
@@ -411,7 +411,7 @@ cmd: "doc",
 })
 
 module.exports = {
-cmd: "tovv",
+name: "tovv",
   desc: "convert media to viewonce",
   fromMe: wtype,
   type: "converter",
@@ -438,7 +438,7 @@ cmd: "tovv",
 })
 
 module.exports = {
-cmd: "bass",
+name: "bass",
   desc: "apply bass effect to audio",
   fromMe: wtype, 
   type: "converter",
@@ -462,7 +462,7 @@ cmd: "bass",
 })
 
 module.exports = {
-  cmd: "blown",
+  name: "blown",
   desc: "apply blown effect to audio",
   fromMe: wtype, 
   type: "converter",
@@ -485,7 +485,7 @@ try {
 })
 
 module.exports = {
-  cmd: "deep",
+  name: "deep",
   desc: "apply deep effect to audio",
   fromMe: wtype, 
   type: "converter",
@@ -504,7 +504,7 @@ try {
 })
 
 module.exports = {
-  cmd: "earrape",
+  name: "earrape",
   desc: "apply extremely loud effect to audio",
   fromMe: wtype, 
   type: "converter",
@@ -523,7 +523,7 @@ try {
 })
 
 module.exports = {
-  cmd: "fast",
+  name: "fast",
   desc: "speed up audio",
   fromMe: wtype, 
   type: "converter",
@@ -542,7 +542,7 @@ try {
 })
 
 module.exports = {
-  cmd: "fat",
+  name: "fat",
   desc: "apply fat effect to audio",
   fromMe: wtype, 
   type: "converter",
@@ -561,7 +561,7 @@ try {
 })
 
 module.exports = {
-  cmd: "nightcore",
+  name: "nightcore",
   desc: "apply nightcore effect to audio",
   fromMe: wtype, 
   type: "converter",
@@ -580,7 +580,7 @@ try {
 })
 
 module.exports = {
-  cmd: "reverse",
+  name: "reverse",
   desc: "reverse audio playback",
   fromMe: wtype, 
   type: "converter",
@@ -599,7 +599,7 @@ try {
 })
 
 module.exports = {
-  cmd: "squirrel",
+  name: "squirrel",
   desc: "apply squirrel voice effect to audio",
   fromMe: wtype, 
   type: "converter",
@@ -618,7 +618,7 @@ try {
 })
 
 module.exports = {
-  cmd: "robot",
+  name: "robot",
   desc: "apply robot voice effect to audio",
   fromMe: wtype, 
   type: "converter",
@@ -637,7 +637,7 @@ try {
 })
 
 module.exports = {
-  cmd: "slow",
+  name: "slow",
   desc: "slow down audio",
   fromMe: wtype, 
   type: "converter",
@@ -656,7 +656,7 @@ try {
 })
 
 module.exports = {
-  cmd: "smooth",
+  name: "smooth",
   desc: "apply smooth effect to audio",
   fromMe: wtype, 
   type: "converter",
@@ -675,7 +675,7 @@ try {
 })
 
 module.exports = {
-  cmd: "chipmunk",
+  name: "chipmunk",
   desc: "apply chipmunk voice effect to audio",
   fromMe: wtype, 
   type: "converter",
@@ -694,7 +694,7 @@ try {
 })
 
 module.exports = {
-  cmd: "tremolo",
+  name: "tremolo",
   desc: "apply tremolo effect to audio",
   fromMe: wtype, 
   type: "converter",
@@ -713,7 +713,7 @@ try {
 })
 
 module.exports = {
-  cmd: "vibrato",
+  name: "vibrato",
   desc: "apply vibrato effect to audio",
   fromMe: wtype, 
   type: "converter",
@@ -732,7 +732,7 @@ try {
 })
 
 module.exports = {
-  cmd: "8d",
+  name: "8d",
   desc: "apply 8D surround effect to audio",
   fromMe: wtype, 
   type: "converter",
@@ -751,7 +751,7 @@ try {
 })
 
 module.exports = {
-  cmd: "echo",
+  name: "echo",
   desc: "apply echo effect to audio",
   fromMe: wtype, 
   type: "converter",
@@ -770,7 +770,7 @@ try {
 })
 
 module.exports = {
-  cmd: "flanger",
+  name: "flanger",
   desc: "apply flanger effect to audio",
   fromMe: wtype, 
   type: "converter",
