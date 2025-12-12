@@ -13,7 +13,7 @@ const util = require("util")
 const path = require("path")
 const { kord, wtype, storeData, getData, isUrl, extractUrlsFromString, sleep } = require("../core")
 
-MTRK({
+module.exports = {
   cmd: "plugin|install",
   desc: "install plugin from url",
   fromMe: true,
@@ -81,7 +81,7 @@ const arr = await extractUrlsFromString(input)
   }
 })
 
-MTRK({
+module.exports = {
   cmd: "remove|uninstall",
   desc: "remove external plugin by name or url",
   fromMe: true,
@@ -119,7 +119,7 @@ let toRemove = plugins.find(p => p.name === input || p.url === norm)
   }
 })
 
-MTRK({
+module.exports = {
 cmd: "plugins",
   desc: "list installed plugins",
   fromMe: true,
