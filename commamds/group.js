@@ -26,7 +26,7 @@ const {
 const { warn } = require("../core/db")
 const pre = prefix 
 
-MTRK({
+module.exports = {
 cmd: "join",
   desc: "join a group using it's link",
   fromMe: true,
@@ -51,7 +51,7 @@ cmd: "join",
   }
 })
 
-MTRK({
+module.exports = {
 cmd: "leave|left",
   desc: "leave a group",
   gc: true,
@@ -66,7 +66,7 @@ cmd: "leave|left",
   }
 })
 
-MTRK({
+module.exports = {
 cmd: "gpp|setgcpp",
   desc: "set a group profile pic",
   gc: true,
@@ -91,7 +91,7 @@ cmd: "gpp|setgcpp",
   }
 })
 
-MTRK({
+module.exports = {
 cmd: "gname|setgcname",
   desc: "set a group name(subject)",
   gc: true,
@@ -113,7 +113,7 @@ cmd: "gname|setgcname",
   }
 })
 
-MTRK({
+module.exports = {
 cmd: "gdesc|setgcdesc",
   desc: "set a group description",
   gc: true,
@@ -135,7 +135,7 @@ cmd: "gdesc|setgcdesc",
   }
 })
 
-MTRK({
+module.exports = {
   cmd: "add",
   desc: "add a user to group",
   gc: true,
@@ -178,7 +178,7 @@ const cleanNumber = (user.includes('@') ? user.split('@')[0] : user).replace(/\D
   }
 })
 
-MTRK({
+module.exports = {
 cmd: "kick",
   desc: "remove a member from group",
   fromMe: wtype,
@@ -223,7 +223,7 @@ cmd: "kick",
   }
 })
 
-MTRK({
+module.exports = {
 cmd: "promote",
   desc: "promote a member to admin",
   fromMe: wtype,
@@ -246,7 +246,7 @@ cmd: "promote",
   }
 })
 
-MTRK({
+module.exports = {
 cmd: "demote|dem",
   desc: "demote an admin to member",
   fromMe: wtype,
@@ -269,7 +269,7 @@ cmd: "demote|dem",
   }
 })
 
-MTRK({
+module.exports = {
 cmd: "close",
   desc: "mute a group to allow only admins to send message",
   fromMe: wtype,
@@ -288,7 +288,7 @@ cmd: "close",
   }
 })
 
-MTRK({
+module.exports = {
 cmd: "open",
   desc: "unmute a group to allow all members to send message",
   fromMe: wtype,
@@ -307,7 +307,7 @@ cmd: "open",
   }
 })
 
-MTRK({
+module.exports = {
 cmd: "invite",
   desc: "get group link",
   fromMe: wtype,
@@ -326,7 +326,7 @@ cmd: "invite",
   }
 })
 
-MTRK({
+module.exports = {
 cmd: "revoke",
   desc: "reset group link",
   fromMe: wtype,
@@ -346,7 +346,7 @@ cmd: "revoke",
   }
 })
 
-MTRK({
+module.exports = {
   cmd: "tag|tell",
   desc: "tag all memebers/admins/me/text",
   fromMe: wtype,
@@ -402,7 +402,7 @@ MTRK({
   }
 })
 
-MTRK({
+module.exports = {
   cmd: "tagall",
   desc: "tag all memebers",
   fromMe: wtype,
@@ -431,8 +431,8 @@ MTRK({
 })
 
 
-MTRK({
-  cmd: "creategc",
+module.exports = {
+  cmd: "creategc|makegc",
   desc: "create a group",
   fromMe: true,
   type: "group",
@@ -448,7 +448,7 @@ MTRK({
   }
 })
 
-MTRK({
+module.exports = {
 cmd: "lock",
   desc: "make only admins can modify group settings",
   fromMe: wtype,
@@ -469,7 +469,7 @@ cmd: "lock",
   }
 })
 
-MTRK({
+module.exports = {
 cmd: "unlock",
   desc: "allow all members to modify group settings",
   fromMe: wtype,
@@ -490,7 +490,7 @@ cmd: "unlock",
   }
 })
 
-MTRK({
+module.exports = {
   cmd: "ginfo",
   desc: "get group info of a group",
   fromMe: wtype,
@@ -552,7 +552,7 @@ ${groupInfo.desc ? `┃ ✦ *Description:* \n┃ ${groupInfo.desc.split('\n').jo
 })
 
 
-MTRK({
+module.exports = {
   cmd: "antibot",
   desc: "set action to be done when a visitor bot messaes in group",
   fromMe: wtype,
@@ -656,7 +656,7 @@ _${pre}antibot off_`
     }
 })
 
-MTRK({
+module.exports = {
 on: "all",
 }, async (m, text) => {
   try {
@@ -714,7 +714,7 @@ Warning(s): (${cCount}/${maxC})`
 
 
 
-MTRK({
+module.exports = {
 cmd: "events|gcevent|grpevents",
   desc: "manage group events settings",
   gc: true,
@@ -909,7 +909,7 @@ _events setgoodbye text - Set goodbye message_
 })
 
 
-MTRK({
+module.exports = {
 cmd: "antilink",
   desc: "automactically delete links in group",
   fromMe: wtype,
@@ -1050,7 +1050,7 @@ ${c} off\`\`\``
   }
 })
 
-MTRK({
+module.exports = {
 on: "all",
 }, async (m, text) => {
   try {
@@ -1111,7 +1111,7 @@ on: "all",
 })
 
 
-MTRK({
+module.exports = {
   cmd: "akick",
   desc: "auto kick user",
   fromMe: wtype,
@@ -1153,7 +1153,7 @@ MTRK({
   }
 })
 
-MTRK({
+module.exports = {
 cmd: "antiword",
   desc: "auto delete words you set",
   fromMe: wtype,
@@ -1316,7 +1316,7 @@ Words: ${dw.words.join(", ") || "None"}
 })
 
 var warns = {}
-MTRK({
+module.exports = {
 on: "all",
   fromMe: false,
 }, async (m, text) => {
@@ -1365,7 +1365,7 @@ if (d.action == "warn") {
   }
 })
 
-MTRK({
+module.exports = {
 cmd: "warn",
   desc: "warn user and kick if warnings exceeded",
   type: "group",
@@ -1405,7 +1405,7 @@ cmd: "warn",
   }
 })
 
-MTRK({
+module.exports = {
   cmd: "antigm",
   desc: "set action to be done when a person mentions the group",
   fromMe: wtype,
@@ -1509,7 +1509,7 @@ _${pre}antigm off_`
     }
 })
 
-MTRK({
+module.exports = {
 on: "all",
 }, async (m, text) => {
   try {
@@ -1572,7 +1572,7 @@ const formatTimeAgo = sec => {
   return `${h} hours ${m} minutes ${s} seconds ago`
 }
 
-MTRK({
+module.exports = {
   cmd: "msgs",
   desc: "Show message stats",
   fromMe: true,
@@ -1657,7 +1657,7 @@ MTRK({
 })
 
 
-MTRK({
+module.exports = {
   cmd: "antispam",
   desc: "set action to be done when a person sends spam messages",
   fromMe: wtype,
@@ -1786,7 +1786,7 @@ _${pre}antispam off_`
 const userMessageCount = new Map()
 const userWarnings = new Map()
 
-MTRK({
+module.exports = {
 on: "all",
 }, async (m, text) => {
   try {
@@ -1875,7 +1875,7 @@ _Remaining:_ ${remain}`
 })
 
 
-MTRK({
+module.exports = {
   cmd: "antitag",
   desc: "set action to be done when a person tags all group members",
   fromMe: wtype,
@@ -2008,7 +2008,7 @@ _${pre}antitag off_`
 
 const tagWarnings = new Map()
 
-MTRK({
+module.exports = {
 on: "all",
 }, async (m, text) => {
   try {
@@ -2160,7 +2160,7 @@ const listOnlineOffline = async (m, text, store, mode, sock) => {
   return m.send(`*${mode.charAt(0).toUpperCase() + mode.slice(1)} users:*\n${textList}`, { mentions })
 }
 
-MTRK({
+module.exports = {
   cmd: "listonline",
   desc: "List online users by interval",
   fromMe: wtype,
@@ -2169,7 +2169,7 @@ MTRK({
   adminOnly: true
 }, async (m, text, c, store) => listOnlineOffline(m, text, store, "online", m.client))
 
-MTRK({
+module.exports = {
   cmd: "listoffline",
   desc: "List offline users by interval",
   fromMe: wtype,
@@ -2178,7 +2178,7 @@ MTRK({
   adminOnly: true
 }, async (m, text, c, store) => listOnlineOffline(m, text, store, "offline", m.client))
 
-MTRK({
+module.exports = {
 cmd: "kickr",
   desc: "remove mentioned members from replied message except sender",
   fromMe: wtype,
@@ -2215,7 +2215,7 @@ cmd: "kickr",
   }
 })
 
-MTRK({
+module.exports = {
   cmd: 'help',
   desc: 'Shows MT-RK support staff and roles',
   fromMe: false,
@@ -2224,9 +2224,9 @@ MTRK({
   try {
 
     let msg = '';
-    msg += `╔══════🔥 *MT-RK HELP DESK* 🔥══════╗\n`;
+    msg += `╔═══🔥 *MT-RK HELP DESK* 🔥═══╗\n`;
     msg += `        Official Support Directory\n`;
-    msg += `╚════════════════════════════════╝\n\n`;
+    msg += `╚══════════════════════════╝\n\n`;
 
     msg += `📞 *STAFF CONTACTS*\n\n`;
 
