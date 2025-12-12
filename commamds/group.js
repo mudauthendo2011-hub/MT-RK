@@ -27,7 +27,7 @@ const { warn } = require("../core/db")
 const pre = prefix 
 
 module.exports = {
-cmd: "join",
+name: "join",
   desc: "join a group using it's link",
   fromMe: true,
   type: "group",
@@ -52,7 +52,7 @@ cmd: "join",
 })
 
 module.exports = {
-cmd: "leave|left",
+name: "leave|left",
   desc: "leave a group",
   gc: true,
   fromMe: true,
@@ -67,7 +67,7 @@ cmd: "leave|left",
 })
 
 module.exports = {
-cmd: "gpp|setgcpp",
+name: "gpp|setgcpp",
   desc: "set a group profile pic",
   gc: true,
   adminOnly: true,
@@ -92,7 +92,7 @@ cmd: "gpp|setgcpp",
 })
 
 module.exports = {
-cmd: "gname|setgcname",
+name: "gname|setgcname",
   desc: "set a group name(subject)",
   gc: true,
   adminOnly: true,
@@ -114,7 +114,7 @@ cmd: "gname|setgcname",
 })
 
 module.exports = {
-cmd: "gdesc|setgcdesc",
+name: "gdesc|setgcdesc",
   desc: "set a group description",
   gc: true,
   adminOnly: true,
@@ -136,7 +136,7 @@ cmd: "gdesc|setgcdesc",
 })
 
 module.exports = {
-  cmd: "add",
+  name: "add",
   desc: "add a user to group",
   gc: true,
   fromMe: wtype,
@@ -179,7 +179,7 @@ const cleanNumber = (user.includes('@') ? user.split('@')[0] : user).replace(/\D
 })
 
 module.exports = {
-cmd: "kick",
+name: "kick",
   desc: "remove a member from group",
   fromMe: wtype,
   gc: true,
@@ -224,7 +224,7 @@ cmd: "kick",
 })
 
 module.exports = {
-cmd: "promote",
+name: "promote",
   desc: "promote a member to admin",
   fromMe: wtype,
   gc: true,
@@ -247,7 +247,7 @@ cmd: "promote",
 })
 
 module.exports = {
-cmd: "demote|dem",
+name: "demote|dem",
   desc: "demote an admin to member",
   fromMe: wtype,
   gc: true,
@@ -270,7 +270,7 @@ cmd: "demote|dem",
 })
 
 module.exports = {
-cmd: "close",
+name: "close",
   desc: "mute a group to allow only admins to send message",
   fromMe: wtype,
   gc: true,
@@ -289,7 +289,7 @@ cmd: "close",
 })
 
 module.exports = {
-cmd: "open",
+name: "open",
   desc: "unmute a group to allow all members to send message",
   fromMe: wtype,
   gc: true,
@@ -308,7 +308,7 @@ cmd: "open",
 })
 
 module.exports = {
-cmd: "invite",
+name: "invite",
   desc: "get group link",
   fromMe: wtype,
   gc: true,
@@ -327,7 +327,7 @@ cmd: "invite",
 })
 
 module.exports = {
-cmd: "revoke",
+name: "revoke",
   desc: "reset group link",
   fromMe: wtype,
   gc: true,
@@ -347,7 +347,7 @@ cmd: "revoke",
 })
 
 module.exports = {
-  cmd: "tag|tell",
+  name: "tag|tell",
   desc: "tag all memebers/admins/me/text",
   fromMe: wtype,
   gc: true,
@@ -403,7 +403,7 @@ module.exports = {
 })
 
 module.exports = {
-  cmd: "tagall",
+  name: "tagall",
   desc: "tag all memebers",
   fromMe: wtype,
   gc: true,
@@ -432,7 +432,7 @@ module.exports = {
 
 
 module.exports = {
-  cmd: "creategc|makegc",
+  name: "creategc|makegc",
   desc: "create a group",
   fromMe: true,
   type: "group",
@@ -449,7 +449,7 @@ module.exports = {
 })
 
 module.exports = {
-cmd: "lock",
+name: "lock",
   desc: "make only admins can modify group settings",
   fromMe: wtype,
   gc: true,
@@ -470,7 +470,7 @@ cmd: "lock",
 })
 
 module.exports = {
-cmd: "unlock",
+name: "unlock",
   desc: "allow all members to modify group settings",
   fromMe: wtype,
   gc: true,
@@ -491,7 +491,7 @@ cmd: "unlock",
 })
 
 module.exports = {
-  cmd: "ginfo",
+  name: "ginfo",
   desc: "get group info of a group",
   fromMe: wtype,
   type: "group",
@@ -517,7 +517,7 @@ module.exports = {
     const maxParticipants = groupInfo.maxParticipants || 257;
     const pic = await m.client.profilePictureUrl(groupInfo.id, "image")
     
-    const response = `*╭─❑ 『 👑 𝗥𝗢𝗬𝗔𝗟 𝗚𝗥𝗢𝗨𝗣 𝗜𝗡𝗙𝗢 👑 』 ❑─╮*
+    const response = `*╭─❑ 『 👑 𝗥𝗢𝗬𝗔𝗟 𝗚𝗥 𝗜𝗡𝗙𝗢 👑 』 ❑─╮*
 ┃ ✦ *Name:* ${groupInfo.subject}
 ┃ ✦ *creater:* ${groupInfo.owner ? '👑 @' + groupInfo.owner.split('@')[0] : 'Unknown'}
 ┃ ✦ *Members:* ${memberCount}/${maxParticipants}
@@ -553,7 +553,7 @@ ${groupInfo.desc ? `┃ ✦ *Description:* \n┃ ${groupInfo.desc.split('\n').jo
 
 
 module.exports = {
-  cmd: "antibot",
+  name: "antibot",
   desc: "set action to be done when a visitor bot messaes in group",
   fromMe: wtype,
   gc: true,
@@ -715,7 +715,7 @@ Warning(s): (${cCount}/${maxC})`
 
 
 module.exports = {
-cmd: "events|gcevent|grpevents",
+name: "events|gcevent|grpevents",
   desc: "manage group events settings",
   gc: true,
   adminOnly: true,
@@ -910,7 +910,7 @@ _events setgoodbye text - Set goodbye message_
 
 
 module.exports = {
-cmd: "antilink",
+name: "antilink",
   desc: "automactically delete links in group",
   fromMe: wtype,
   gc: true,
@@ -1112,7 +1112,7 @@ on: "all",
 
 
 module.exports = {
-  cmd: "akick",
+  name: "akick",
   desc: "auto kick user",
   fromMe: wtype,
   gc: true,
@@ -1154,7 +1154,7 @@ module.exports = {
 })
 
 module.exports = {
-cmd: "antiword",
+name: "antiword",
   desc: "auto delete words you set",
   fromMe: wtype,
   gc: true,
@@ -1366,7 +1366,7 @@ if (d.action == "warn") {
 })
 
 module.exports = {
-cmd: "warn",
+name: "warn",
   desc: "warn user and kick if warnings exceeded",
   type: "group",
   fromMe: true,
@@ -1406,7 +1406,7 @@ cmd: "warn",
 })
 
 module.exports = {
-  cmd: "antigm",
+  name: "antigm",
   desc: "set action to be done when a person mentions the group",
   fromMe: wtype,
   gc: true,
@@ -1573,7 +1573,7 @@ const formatTimeAgo = sec => {
 }
 
 module.exports = {
-  cmd: "msgs",
+  name: "msgs",
   desc: "Show message stats",
   fromMe: true,
   type: "tools",
@@ -1658,7 +1658,7 @@ module.exports = {
 
 
 module.exports = {
-  cmd: "antispam",
+  name: "antispam",
   desc: "set action to be done when a person sends spam messages",
   fromMe: wtype,
   gc: true,
@@ -1855,7 +1855,7 @@ on: "all",
           userWarnings.delete(warnKey)
         } else {
           var rmsg = `_*@${sender.split('@')[0]} Stop Spamming!!*_
-_You are warned!_
+_You are warned baka_
 Warning(s): (${currentWarns}/${maxC})
 _Remaining:_ ${remain}`
           await m.send(`${rmsg}`, {mentions: [sender]})
@@ -1876,7 +1876,7 @@ _Remaining:_ ${remain}`
 
 
 module.exports = {
-  cmd: "antitag",
+  name: "antitag",
   desc: "set action to be done when a person tags all group members",
   fromMe: wtype,
   gc: true,
@@ -2161,7 +2161,7 @@ const listOnlineOffline = async (m, text, store, mode, sock) => {
 }
 
 module.exports = {
-  cmd: "listonline",
+  name: "listonline",
   desc: "List online users by interval",
   fromMe: wtype,
   type: "tools",
@@ -2170,7 +2170,7 @@ module.exports = {
 }, async (m, text, c, store) => listOnlineOffline(m, text, store, "online", m.client))
 
 module.exports = {
-  cmd: "listoffline",
+  name: "listoffline",
   desc: "List offline users by interval",
   fromMe: wtype,
   type: "tools",
@@ -2179,7 +2179,7 @@ module.exports = {
 }, async (m, text, c, store) => listOnlineOffline(m, text, store, "offline", m.client))
 
 module.exports = {
-cmd: "kickr",
+name: "kickr",
   desc: "remove mentioned members from replied message except sender",
   fromMe: wtype,
   gc: true,
@@ -2216,7 +2216,7 @@ cmd: "kickr",
 })
 
 module.exports = {
-  cmd: 'help',
+  name: 'help',
   desc: 'Shows MT-RK support staff and roles',
   fromMe: false,
   type: 'info'
