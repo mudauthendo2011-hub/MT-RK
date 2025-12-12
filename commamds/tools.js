@@ -24,7 +24,7 @@ const pre = prefix
 
 
 module.exports = {
-  cmd: "setcmd",
+  name: "setcmd",
   desc: "bind a command to a sticker (whenevrr that stk is sent, the binded command is executed)",
   fromMe: true,
   type: "tools",
@@ -47,7 +47,7 @@ module.exports = {
 })
 
 module.exports = {
-  cmd: "delcmd",
+  name: "delcmd",
   desc: "Remove/unbind a command from a sticker",
   fromMe: true,
   type: "tools",
@@ -74,7 +74,7 @@ module.exports = {
 });
 
 module.exports = {
-  cmd: "listcmd|listcmds",
+  name: "listcmd|listcmds",
   desc: "List all sticker-bound commands",
   fromMe: true,
   type: "tools",
@@ -100,7 +100,7 @@ module.exports = {
 
 
 module.exports = {
-  cmd: "permit",
+  name: "permit",
   desc: "permit a command or command group to work even when bot is private",
   fromMe: true,
   type: "tools",
@@ -318,7 +318,7 @@ module.exports = {
 })
 
 module.exports = {
-  cmd: "mention",
+  name: "mention",
   type: "tools",
   desc: "set action to be done when owner is mentioned",
   fromMe: true,
@@ -424,7 +424,7 @@ async function saveAfkData(data) {
 }
 
 module.exports = {
-  cmd: "afk",
+  name: "afk",
   desc: "set afk message",
   fromMe: wtype,
   type: "tools"
@@ -583,7 +583,7 @@ if (!getData("areact_config")) {
     }
     
 module.exports = {
-  cmd: "areact|autoreact|autoreaction",
+  name: "areact|autoreact|autoreaction",
   desc: "automatically react to messages",
   fromMe: true,
   type: "tools",
@@ -671,7 +671,7 @@ module.exports = {
 })
 
 module.exports = {
-  cmd: "ignore",
+  name: "ignore",
   desc: "ignores the current chat",
   fromMe: true,
   type: "bot"
@@ -692,7 +692,7 @@ module.exports = {
 })
 
 module.exports = {
-  cmd: "allow",
+  name: "allow",
   desc: "removes the current chat from ignore list",
   fromMe: true,
   type: "bot"
@@ -713,7 +713,7 @@ module.exports = {
 })
 
 module.exports = {
-  cmd: "bot",
+  name: "bot",
   desc: "turn bot on or off in this chat",
   fromMe: true,
   type: "bot"
@@ -745,7 +745,7 @@ module.exports = {
   }
 })
 module.exports = {
-    cmd: "support",
+    name: "support",
     desc: "Official MT-RK community and support information",
     fromMe: false,
     type: "info",
@@ -757,7 +757,7 @@ module.exports = {
 彡─✦『 🛡️ MT-RK OFFICIAL SUPPORT 』✦─彡
 
 OWNER:
-• +27675859928
+• mudau thendo
   – Official MT-RK owner and project head.
 
 COMMUNITY (Main):
