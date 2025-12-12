@@ -28,7 +28,7 @@ const getImageUrl = async (m) => {
 
 
 
-MTRK({
+module.exports = {
         cmd: "remini|upscale|hd",
         desc: "increase the quality of an image(pixelcut)",
         fromMe: wtype,
@@ -49,7 +49,7 @@ MTRK({
 })
 
 
-MTRK({
+module.exports = {
         cmd: "gfx|gfx1",
         desc: "create gfx image",
         fromMe: wtype,
@@ -69,7 +69,7 @@ MTRK({
 }
 )
 
-MTRK({
+module.exports = {
         cmd: "gfx2",
         desc: "create gfx2 image",
         fromMe: wtype,
@@ -89,7 +89,7 @@ MTRK({
 )
 
 
-MTRK({
+module.exports = {
         cmd: "gfx3",
         desc: "create gfx3 image",
         fromMe: wtype,
@@ -109,7 +109,7 @@ MTRK({
 )
 
 
-MTRK({
+module.exports = {
         cmd: "gfx4",
         desc: "create gfx4 image",
         fromMe: wtype,
@@ -129,7 +129,7 @@ MTRK({
 )
 
 
-MTRK({
+module.exports = {
         cmd: "gfx5",
         desc: "create gfx5 image with three texts",
         fromMe: wtype,
@@ -150,7 +150,7 @@ MTRK({
 )
 
 
-MTRK({
+module.exports = {
         cmd: "gfx6",
         desc: "create gfx6 image with three texts",
         fromMe: wtype,
@@ -171,7 +171,7 @@ MTRK({
 )
 
 
-MTRK({
+module.exports = {
         cmd: "gfx7",
         desc: "create gfx7 image",
         fromMe: wtype,
@@ -191,7 +191,7 @@ MTRK({
 )
 
 
-MTRK({
+module.exports = {
         cmd: "gfx8",
         desc: "create gfx8 image",
         fromMe: wtype,
@@ -211,7 +211,7 @@ MTRK({
 )
 
 
-MTRK({
+module.exports = {
         cmd: "gfx9",
         desc: "create gfx9 image with single text",
         fromMe: wtype,
@@ -230,7 +230,7 @@ MTRK({
 )
 
 
-MTRK({
+module.exports = {
         cmd: "gfx10",
         desc: "create gfx10 image with single text",
         fromMe: wtype,
@@ -248,7 +248,7 @@ MTRK({
 }
 )
 
-MTRK({
+module.exports = {
         cmd: "gfx11",
         desc: "create gfx11 image with single text",
         fromMe: wtype,
@@ -267,7 +267,7 @@ MTRK({
 )
 
 
-MTRK({
+module.exports = {
         cmd: "gfx12",
         desc: "create gfx12 image with single text",
         fromMe: wtype,
@@ -285,7 +285,7 @@ MTRK({
 }
 )
 
-MTRK({
+module.exports = {
         cmd: "carbon",
         desc: "create carbon image from code",
         fromMe: wtype,
@@ -310,7 +310,7 @@ MTRK({
 }
 )
 
-MTRK({
+module.exports = {
         cmd: "wanted",
         desc: "create mock wanted poster of replied user or pic",
         fromMe: wtype,
@@ -333,7 +333,7 @@ MTRK({
         }
 })
 
-MTRK({
+module.exports = {
         cmd: "wasted",
         desc: "create GTA wasted effect on replied user or pic",
         fromMe: wtype,
@@ -356,7 +356,7 @@ MTRK({
         }
 })
 
-MTRK({
+module.exports = {
         cmd: "rainbow",
         desc: "apply rainbow filter to replied user or pic",
         fromMe: wtype,
@@ -379,7 +379,7 @@ MTRK({
         }
 })
 
-MTRK({
+module.exports = {
         cmd: "trigger-meme",
         desc: "create triggered meme of replied user or pic",
         fromMe: wtype,
@@ -402,7 +402,7 @@ MTRK({
         }
 })
 
-MTRK({
+module.exports = {
         cmd: "rip-meme",
         desc: "create RIP meme of replied user or pic",
         fromMe: wtype,
@@ -425,7 +425,7 @@ MTRK({
         }
 })
 
-MTRK({
+module.exports = {
         cmd: "mnm",
         desc: "create M&M candy effect with replied user or pic",
         fromMe: wtype,
@@ -448,7 +448,7 @@ MTRK({
         }
 })
 
-MTRK({
+module.exports = {
         cmd: "jail",
         desc: "put replied user or pic behind bars",
         fromMe: wtype,
@@ -471,7 +471,7 @@ MTRK({
         }
 })
 
-MTRK({
+module.exports = {
         cmd: "invert",
         desc: "invert colors of replied user or pic",
         fromMe: wtype,
@@ -495,7 +495,7 @@ MTRK({
 })
 
 
-MTRK({
+module.exports = {
   cmd: "naturewlp",
   desc: "sends slides of nature wallpapers",
   fromMe: wtype,
