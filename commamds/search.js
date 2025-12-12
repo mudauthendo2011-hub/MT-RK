@@ -27,8 +27,8 @@ const crypto = require('crypto')
 const yts = require("yt-search")
 const ffmpeg = require('fluent-ffmpeg')
 const fs = require('fs')
-MTRK(
-{
+
+module.exports = {
         cmd: "websearch|search",
         desc: "search the web based on given query",
         fromMe: wtype,
@@ -60,7 +60,7 @@ MTRK(
 })
 
 
-MTRK({
+module.exports = {
         cmd: "img|image",
         desc: "search images based on query",
         fromMe: wtype,
@@ -89,7 +89,7 @@ MTRK({
         }
 })
 
-MTRK({
+module.exports = {
         cmd: "npm",
         desc: "gives description of a given npm package",
         fromMe: wtype,
@@ -127,7 +127,7 @@ function sign(signString, accessSecret) {
         .digest()
         .toString('base64')
 }
-MTRK({
+module.exports = {
   cmd: "shazam|findaudio|find|identifyaudio",
   desc: "search for audio details of replied video/audio",
   fromMe: wtype,
@@ -251,7 +251,7 @@ MTRK({
 
 
 
-MTRK({
+module.exports = {
   cmd: "element",
   desc: "get info of a periodic element",
   fromMe: wtype,
