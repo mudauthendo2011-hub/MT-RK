@@ -12,7 +12,7 @@
  const { MTRK, wtype, isAdmin, isadminn, saveFilter, listFilters, removeFilter, prefix, getData, storeData, isBotAdmin} = require("../core")
 
 module.exports = {
-  cmd: "delete|del|dlt",
+  name: "delete|del|dlt",
   desc: "delete a replied message",
   fromMe: wtype,
   type: "user",
@@ -48,7 +48,7 @@ module.exports = {
 
 
 module.exports = {
-	cmd: "archive",
+	name: "archive",
     desc: "archive a chat",
     fromMe: true,
     type: "user",
@@ -70,7 +70,7 @@ module.exports = {
 })
 
 module.exports = {
-    cmd: "unarchive",
+    name: "unarchive",
     desc: "unarchive a chat",
     fromMe: true,
     type: "user",
@@ -93,7 +93,7 @@ module.exports = {
 
 
 module.exports = {
-    cmd: "jid",
+    name: "jid",
     desc: "gets jid of either replied user or present chat",
     fromMe: wtype,
     type: "user",
@@ -108,7 +108,7 @@ module.exports = {
 })
 
 module.exports = {
-    cmd: "pp|setpp",
+    name: "pp|setpp",
     desc: "changes profile picture to replied photo",
     fromMe: true,
     type: "user",
@@ -129,7 +129,7 @@ module.exports = {
 })
 
 module.exports = {
-    cmd: "removepp",
+    name: "removepp",
     desc: "removes profile picture",
     fromMe: true,
     type: "user",
@@ -144,7 +144,7 @@ module.exports = {
 })
 
 module.exports = {
-    cmd: "clear",
+    name: "clear",
     desc: "clear a chat",
     fromMe: true,
     type: "user",
@@ -165,7 +165,7 @@ module.exports = {
 })
 
 module.exports = {
-    cmd: "pinchat|chatpin",
+    name: "pinchat|chatpin",
     desc: "pin a chat",
     fromMe: true,
     type: "user"
@@ -182,7 +182,7 @@ module.exports = {
 })
 
 module.exports = {
-    cmd: "unpinchat|unchatpin",
+    name: "unpinchat|unchatpin",
     desc: "unpin a chat",
     fromMe: true,
     type: "user"
@@ -199,7 +199,7 @@ module.exports = {
 })
 
 module.exports = {
-    cmd: "block|blc",
+    name: "block|blc",
     desc: 'block a user',
     fromMe: true,
     type: 'user',
@@ -217,7 +217,7 @@ module.exports = {
 })
 
 module.exports = {
-    cmd: "unblock",
+    name: "unblock",
     desc: 'unblock a user',
     fromMe: true,
     type: 'user',
@@ -235,7 +235,7 @@ module.exports = {
 })
 
 module.exports = {
-    cmd: "listblock|allblocked",
+    name: "listblock|allblocked",
     desc: "fetches list of blocked numbers",
     fromMe: true,
     type: 'user',
@@ -252,7 +252,7 @@ module.exports = {
 })
 
 module.exports = {
-    cmd: "setname",
+    name: "setname",
     desc: "set profile name",
     fromMe: true,
     type: "user",
@@ -269,7 +269,7 @@ module.exports = {
 })
 
 module.exports = {
-    cmd: "bio|setbio",
+    name: "bio|setbio",
     desc: "set bio for profile",
     fromMe: true,
     type: "user",
@@ -286,7 +286,7 @@ module.exports = {
 })
 
 module.exports = {
-   cmd: "getpp",
+   name: "getpp",
    desc: "get profile pic of a user/group",
    fromMe: true,
    type: "user",
@@ -313,7 +313,7 @@ module.exports = {
 
 
 module.exports = {
-    cmd: "forward|fwrd",
+    name: "forward|fwrd",
     desc: "forward a message",
     fromMe: true,
     type: "user",
@@ -335,7 +335,7 @@ module.exports = {
 })
 
 module.exports = {
-  cmd: 'lastseen',
+  name: 'lastseen',
   fromMe: true,
   desc: 'to change lastseen privacy',
   type: 'privacy'
@@ -352,7 +352,7 @@ module.exports = {
   }
 })
 module.exports = {
-   cmd: 'online',
+   name: 'online',
    fromMe: true,
    desc: 'to change online privacy',
    type: 'privacy'
@@ -369,7 +369,7 @@ module.exports = {
   }
 })
 module.exports = {
-   cmd: 'mypp',
+   name: 'mypp',
    fromMe: true,
    desc: 'privacy setting profile picture',
    type: 'privacy'
@@ -386,7 +386,7 @@ module.exports = {
   }
 })
 module.exports = {
-    cmd: 'mystatus',
+    name: 'mystatus',
 	fromMe: true,
 	desc: 'privacy for my status',
 	type: 'privacy'
@@ -403,7 +403,7 @@ module.exports = {
   }
 })
 module.exports = {
-    cmd: 'read',
+    name: 'read',
 	fromMe: true,
 	desc: 'privacy for read message',
 	type: 'privacy'
@@ -420,7 +420,7 @@ module.exports = {
   }
 })
 module.exports = {
-    cmd: 'allow-gcadd|groupadd',
+    name: 'allow-gcadd|groupadd',
 	fromMe: true,
 	desc: 'privacy for group add',
 	type: 'privacy'
@@ -440,7 +440,7 @@ module.exports = {
 
 
 module.exports = {
-  cmd: "pfilter",
+  name: "pfilter",
   desc: "Set a PM filter",
   fromMe: true,
   pm: true,
@@ -456,7 +456,7 @@ module.exports = {
 })
 
 module.exports = {
-  cmd: "pstop",
+  name: "pstop",
   desc: "Remove a PM filter",
   fromMe: true,
   pm: true,
@@ -472,7 +472,7 @@ module.exports = {
 })
 
 module.exports = {
-  cmd: "gfilter",
+  name: "gfilter",
   desc: "Set a group filter",
   fromMe: true,
   type: "autoreply",
@@ -489,7 +489,7 @@ module.exports = {
 })
 
 module.exports = {
-  cmd: "gstop",
+  name: "gstop",
   desc: "Remove a group filter",
   fromMe: true,
   type: "autoreply",
@@ -542,7 +542,7 @@ module.exports = {
 })
 
 module.exports = {
-  cmd: "mute",
+  name: "mute",
   desc: "mute a user or a sticker",
   fromMe: true,
   type: "bot",
@@ -578,7 +578,7 @@ module.exports = {
 
 
 module.exports = {
-  cmd: "unmute",
+  name: "unmute",
   desc: "unmute a user or sticker",
   fromMe: true,
   type: "bot",
