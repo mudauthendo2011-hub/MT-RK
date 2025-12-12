@@ -15,7 +15,7 @@ const s = require('../set');
 const { cm } = require('../framework/Class/Commands'); // MT-RK command list
 
 module.exports = {
-  cmd: 'menu',
+  name: 'menu',
   desc: 'Display all bot commands and system info',
   fromMe: true,
   type: 'bot'
