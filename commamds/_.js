@@ -14,7 +14,7 @@ const Settings = require('../framework/Class/Settings');
 const s = require('../set');
 const { cm } = require('../framework/Class/Commands'); // MT-RK command list
 
-MTRK({
+module.exports = {
   cmd: 'menu',
   desc: 'Display all bot commands and system info',
   fromMe: true,
