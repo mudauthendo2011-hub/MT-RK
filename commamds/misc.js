@@ -20,7 +20,7 @@ const { MTRK,
 const axios = require("axios")
 
 module.exports = {
-cmd: "quote",
+name: "quote",
   desc: "get random quote",
   fromMe: wtype,
   type: "misc",
@@ -39,7 +39,7 @@ cmd: "quote",
 })
 
 module.exports = {
-cmd: "fact",
+name: "fact",
   desc: "get random fact",
   fromMe: wtype,
   type: "misc",
@@ -57,7 +57,7 @@ cmd: "fact",
 })
 
 module.exports = {
-cmd: "q|quotely",
+name: "q|quotely",
   desc: "makes sticker of replied messaged",
   fromMe: wtype,
   type: "misc",
@@ -102,7 +102,7 @@ cmd: "q|quotely",
 })
 
 module.exports = {
-cmd: "ebinary|ebin",
+name: "ebinary|ebin",
   desc: "encode text to binary",
   fromMe: wtype,
   type: "misc",
@@ -118,7 +118,7 @@ cmd: "ebinary|ebin",
 })
 
 module.exports = {
-cmd: "dbinary|dbin",
+name: "dbinary|dbin",
   desc: "decode text to binary",
   fromMe: wtype,
   type: "misc",
@@ -134,7 +134,7 @@ cmd: "dbinary|dbin",
 })
 
 module.exports = {
-cmd: "pick",
+name: "pick",
   desc: "pick a random person in group",
   fromMe: wtype,
   gc: true,
@@ -153,7 +153,7 @@ cmd: "pick",
 })
 
 module.exports = {
-cmd: "pickupl|pickupline",
+name: "pickupl|pickupline",
   desc: "get pickupline",
   fromMe: wtype,
   type: "fun",
@@ -171,7 +171,7 @@ cmd: "pickupl|pickupline",
 })
 
 module.exports = {
-cmd: "breakupl|breakupline",
+name: "breakupl|breakupline",
   desc: "get breakupline",
   fromMe: wtype,
   type: "fun",
@@ -190,7 +190,7 @@ cmd: "breakupl|breakupline",
  
  
  module.exports = {
-  cmd: "insult|roast",
+  name: "insult|roast",
   desc: "sends an insult message to replied/mentioned user",
   fromMe: wtype,
   type: "fun",
@@ -210,7 +210,7 @@ cmd: "breakupl|breakupline",
 })
 
 module.exports = {
-  cmd: "emojimix|emix",
+  name: "emojimix|emix",
   desc: "mix two emojis into a sticker",
   fromMe: wtype,
   type: "fun",
@@ -237,7 +237,7 @@ module.exports = {
 
 
 module.exports = {
-  cmd: "addnote|writenote|savenote",
+  name: "addnote|writenote|savenote",
   desc: "write note to db",
   fromMe: true,
   type: "utilities",
@@ -255,7 +255,7 @@ module.exports = {
 })
 
 module.exports = {
-  cmd: "delnote|removenote|deletenote",
+  name: "delnote|removenote|deletenote",
   desc: "remove note from db",
   fromMe: true,
   type: "utilities",
@@ -275,7 +275,7 @@ module.exports = {
 })
 
 module.exports = {
-  cmd: "allnotes|notes|getnotes",
+  name: "allnotes|notes|getnotes",
   desc: "get all saved notes",
   fromMe: true,
   type: "utilities",
@@ -297,7 +297,7 @@ module.exports = {
 })
 
 module.exports = {
-  cmd: "getnote|readnote|note|nt",
+  name: "getnote|readnote|note|nt",
   desc: "get specific note by name",
   fromMe: true,
   type: "utilities",
@@ -317,7 +317,7 @@ module.exports = {
 })
 
 module.exports = {
-  cmd: "delallnote|delnotes|clearallnotes",
+  name: "delallnote|delnotes|clearallnotes",
   desc: "delete all notes from db",
   fromMe: true,
   type: "utilities",
