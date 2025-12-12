@@ -13,7 +13,7 @@ const path = require("path");
 const fetch = require("node-fetch")
 
 module.exports = {
-    cmd: "anime",
+    name: "anime",
     desc: "search for anime info from MyAnimeList",
     fromMe: wtype,
     react: "🔍",
@@ -44,7 +44,7 @@ module.exports = {
 })
 
 module.exports = {
-    cmd: "waifu|animegirl",
+    name: "waifu|animegirl",
     desc: "send random anime girl image",
     fromMe: wtype,
     react: "💕",
@@ -66,7 +66,7 @@ module.exports = {
 })
 
 module.exports = {
-    cmd: "manga",
+    name: "manga",
     desc: "search for manga information from MyAnimeList",
     fromMe: wtype,
     react: "📚",
@@ -99,7 +99,7 @@ module.exports = {
 })
 
 module.exports = {
-    cmd: "animequote",
+    name: "animequote",
     desc: "get random anime quote",
     type: "anime",
     fromMe: wtype,
@@ -121,7 +121,7 @@ module.exports = {
 })
 
 module.exports = {
-    cmd: "animenews",
+    name: "animenews",
     desc: "latest anime news from MyAnimeList",
     fromMe: wtype,
     type: "anime",
@@ -148,7 +148,7 @@ module.exports = {
 })
 
 module.exports = {
-    cmd: "character|animechar",
+    name: "character|animechar",
     desc: "search for anime character info",
     fromMe: wtype,
     type: "anime",
@@ -177,7 +177,7 @@ module.exports = {
 })
 
 module.exports = {
-    cmd: "animesearch|animeinfo",
+    name: "animesearch|animeinfo",
     desc: "search anime by image (reply to image)",
     fromMe: wtype,
     react: "🔍",
@@ -218,7 +218,7 @@ module.exports = {
 })
 
 module.exports = {
-    cmd: "animewatch|watching",
+    name: "animewatch|watching",
     desc: "track anime you're currently watching",
     fromMe: wtype,
     type: "anime",
@@ -273,7 +273,7 @@ module.exports = {
 })
 
 module.exports = {
-    cmd: "animegif|animatedgif",
+    name: "animegif|animatedgif",
     desc: "sends random anime gif based on category",
     fromMe: wtype,
     type: "anime",
@@ -297,7 +297,7 @@ module.exports = {
 })
 
 module.exports = {
-    cmd: "season|animeseason",
+    name: "season|animeseason",
     desc: "get anime from specific season",
     fromMe: wtype,
     type: "anime",
@@ -338,7 +338,7 @@ module.exports = {
 })
 
 module.exports = {
-    cmd: "animerec|recommend",
+    name: "animerec|recommend",
     desc: "get anime recommendations",
     fromMe: wtype,
     type: "anime",
@@ -381,7 +381,7 @@ module.exports = {
 })
 
 module.exports = {
-    cmd: "airing|nextep",
+    name: "airing|nextep",
     desc: "check when next episode airs",
     fromMe: wtype,
     type: "anime",
@@ -453,7 +453,7 @@ module.exports = {
 
 
 module.exports = {
-    cmd: "slap",
+    name: "slap",
     desc: "send waifu slap animation",
     fromMe: wtype,
     type: "fun",
@@ -486,7 +486,7 @@ module.exports = {
 });
 
 module.exports = {
-    cmd: "cry",
+    name: "cry",
     desc: "send waifu cry animation",
     fromMe: wtype,
     type: "fun",
@@ -519,7 +519,7 @@ module.exports = {
 });
 
 module.exports = {
-    cmd: "hug",
+    name: "hug",
     desc: "send waifu hug animation",
     fromMe: wtype,
     type: "fun",
@@ -552,7 +552,7 @@ module.exports = {
 });
 
 module.exports = {
-    cmd: "kiss",
+    name: "kiss",
     desc: "send waifu kiss animation",
     fromMe: wtype,
     type: "fun",
@@ -585,7 +585,7 @@ module.exports = {
 });
 
 module.exports = {
-    cmd: "lick",
+    name: "lick",
     desc: "send waifu lick animation",
     fromMe: wtype,
     type: "fun",
@@ -618,7 +618,7 @@ module.exports = {
 });
 
 module.exports = {
-    cmd: "pat",
+    name: "pat",
     desc: "send waifu pat animation",
     fromMe: wtype,
     type: "fun",
@@ -651,7 +651,7 @@ module.exports = {
 });
 
 module.exports = {
-    cmd: "blush",
+    name: "blush",
     desc: "send waifu blush animation",
     fromMe: wtype,
     type: "fun",
@@ -684,7 +684,7 @@ module.exports = {
 });
 
 module.exports = {
-    cmd: "kill",
+    name: "kill",
     desc: "send waifu kill animation",
     fromMe: wtype,
     type: "fun",
@@ -717,7 +717,7 @@ module.exports = {
 });
 
 module.exports = {
-    cmd: "kik",
+    name: "kik",
     desc: "send waifu kick animation",
     fromMe: wtype,
     type: "fun",
@@ -750,7 +750,7 @@ module.exports = {
 });
 
 module.exports = {
-    cmd: "bite",
+    name: "bite",
     desc: "send waifu bite animation",
     fromMe: wtype,
     type: "fun",
@@ -783,7 +783,7 @@ module.exports = {
 });
 
 module.exports = {
-    cmd: "high-five",
+    name: "high-five",
     desc: "send waifu high-five animation",
     fromMe: wtype,
     type: "fun",
@@ -816,7 +816,7 @@ module.exports = {
 });
 
 module.exports = {
-    cmd: "handhold",
+    name: "handhold",
     desc: "send waifu handhold animation",
     fromMe: wtype,
     type: "fun",
@@ -849,7 +849,7 @@ module.exports = {
 });
 
 module.exports = {
-    cmd: "dance",
+    name: "dance",
     desc: "send waifu dance animation",
     fromMe: wtype,
     type: "fun",
@@ -882,7 +882,7 @@ module.exports = {
 });
 
 module.exports = {
-    cmd: "bully",
+    name: "bully",
     desc: "send waifu bully animation",
     fromMe: wtype,
     type: "fun",
@@ -915,7 +915,7 @@ module.exports = {
 });
 
 module.exports = {
-    cmd: "wink",
+    name: "wink",
     desc: "send waifu wink animation",
     fromMe: wtype,
     type: "fun",
@@ -948,7 +948,7 @@ module.exports = {
 });
 
 module.exports = {
-    cmd: "cuddle",
+    name: "cuddle",
     desc: "send waifu cuddle animation",
     fromMe: wtype,
     type: "fun",
@@ -981,7 +981,7 @@ module.exports = {
 });
 
 module.exports = {
-    cmd: "awoo",
+    name: "awoo",
     desc: "send waifu awoo",
     fromMe: wtype,
     type: "fun",
@@ -1003,7 +1003,7 @@ module.exports = {
 });
 
 module.exports = {
-    cmd: "cringe",
+    name: "cringe",
     desc: "send waifu cringe",
     fromMe: wtype,
     type: "fun",
@@ -1025,7 +1025,7 @@ module.exports = {
 });
 
 module.exports = {
-    cmd: "megumin",
+    name: "megumin",
     desc: "send megumin waifu",
     fromMe: wtype,
     type: "fun",
@@ -1047,7 +1047,7 @@ module.exports = {
 });
 
 module.exports = {
-    cmd: "shinobu",
+    name: "shinobu",
     desc: "send shinobu waifu",
     fromMe: wtype,
     type: "fun",
