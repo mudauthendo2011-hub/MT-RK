@@ -13,7 +13,7 @@ const { MTRK, wtype, updateConfig, prefix, updateEnv, updateEnvSudo, addEnvSudo,
   
   
   
-MTRK({
+module.exports = {
   cmd: "setvar",
   desc: "set a config in config.env/config.js",
   fromMe: true,
@@ -54,7 +54,7 @@ MTRK({
   }
 })
 
-MTRK({
+module.exports = {
 cmd: "getvar",
   desc: "get all variables from config.js/config.env",
   fromMe: true,
@@ -78,7 +78,7 @@ cmd: "getvar",
   }
 })
 
-MTRK({
+module.exports = {
   cmd: 'delvar',
   desc: "delete a variable/setting",
   fromMe: true,
@@ -109,7 +109,7 @@ MTRK({
   }
 })
 
-MTRK({
+module.exports = {
   cmd: "allvar",
   desc: "get all variables/settings",
   fromMe: true,
@@ -285,21 +285,21 @@ function deltog() {
 }
 
 
-MTRK({
+module.exports = {
   cmd: "readstatus",
   desc: "turn on/off readstatus",
   fromMe: true,
   type: "config",
 }, toggle("readstatus", "STATUS_VIEW", "Read Status"))
 
-MTRK({
+module.exports = {
   cmd: "likestatus",
   desc: "turn on/off likestatus",
   fromMe: true,
   type: "config",
 }, toggle("likestatus", "LIKE_STATUS", "Like Status"))
 
-MTRK({
+module.exports = {
   cmd: "startupmsg",
   desc: "turn on/off startupmsg",
   fromMe: true,
@@ -307,7 +307,7 @@ MTRK({
 }, toggle("startupmsg", "STARTUP_MSG", "Startup Msg"))
 
 
-MTRK({
+module.exports = {
   cmd: "alwaysonline",
   desc: "turn on/off always online",
   fromMe: true,
@@ -322,49 +322,49 @@ MTRK({
 }, deltog())
 
 
-MTRK({
+module.exports = {
   cmd: "antiedit",
   desc: "turn on/off Anti-Edit",
   fromMe: true,
   type: "config",
 }, toggle("antiedit", "ANTI_EDIT", "Anti Edit"))
 
-MTRK({
+module.exports = {
   cmd: "antieditchat",
   desc: "turn on/off antiedit in chat",
   fromMe: true,
   type: "config",
 }, toggle("antieditchat", "ANTI_EDIT_IN_CHAT", "Anti Edit In Chat"))
 
-MTRK({
+module.exports = {
   cmd: "savestatus",
   desc: "turn on/off save status",
   fromMe: true,
   type: "config",
 }, toggle("savestatus", "SAVE_STATUS", "Save Status"))
 
-MTRK({
+module.exports = {
   cmd: "cmdreact",
   desc: "turn on/off command react",
   fromMe: true,
   type: "config",
 }, toggle("cmdreact", "CMD_REACT", "Command React"))
 
-MTRK({
+module.exports = {
   cmd: "readmsg|read",
   desc: "turn on/off read message",
   fromMe: true,
   type: "config",
 }, toggle("readmsg", "READ_MESSAGE", "Read Message"))
 
-MTRK({
+module.exports = {
   cmd: "rejectcall",
   desc: "turn on/off reject call",
   fromMe: true,
   type: "config",
 }, toggle("rejectcall", "REJECT_CALL", "Reject Call"))
 
-MTRK({
+module.exports = {
   cmd: "setsudo",
   desc: "add a user to sudo",
   fromMe: true,
@@ -416,7 +416,7 @@ if (text.trim().toLowerCase() === 'admins') {
   }
 })
 
-MTRK({
+module.exports = {
   cmd: "delsudo",
   desc: "delete user from sudo list",
   fromMe: true,
@@ -468,7 +468,7 @@ if (text.trim().toLowerCase() === 'admins') {
 })
 
 
-MTRK({
+module.exports = {
   cmd: "guards|protecters",
   desc: "get all guards",
   fromMe: wtype,
@@ -499,7 +499,7 @@ MTRK({
 
     msg += "\n——————————————\n";
     msg += ">  ⚠️ Do not tag guards without a valid reason.\n";
-    msg += "Improper use may result in restrictions.";
+    msg += "> Improper use may result in restrictions.";
 
     // Send message with mentions
     return await m.send(msg, { mentions: mentionJids });
@@ -510,7 +510,7 @@ MTRK({
   }
 });
 
-MTRK({
+module.exports = {
   cmd: "setmod|addmod",
   desc: "add a user to mod list",
   fromMe: true,
@@ -562,7 +562,7 @@ if (text.trim().toLowerCase() === 'admins') {
   }
 })
 
-MTRK({
+module.exports = {
   cmd: "delmod",
   desc: "delete user from mod list",
   fromMe: true,
@@ -613,7 +613,7 @@ if (text.trim().toLowerCase() === 'admins') {
   }
 })
 
-MTRK({
+module.exports = {
   cmd: "mods",
   desc: "get all mods",
   fromMe: wtype,
@@ -655,7 +655,7 @@ MTRK({
   }
 }); 
 
-MTRK({
+module.exports = {
 cmd: "mode",
   desc: "set bot to private or public",
   fromMe: true,
@@ -698,7 +698,7 @@ cmd: "mode",
   }
 })
 
-MTRK({
+module.exports = {
 cmd: "statusemoji",
   desc: "set like status emoji",
   fromMe: true,
@@ -713,7 +713,7 @@ cmd: "statusemoji",
   }
 })
 
-MTRK({
+module.exports = {
   cmd: "savecmd",
   desc: "set save emoji",
   fromMe: true,
@@ -728,7 +728,7 @@ MTRK({
   }
 })
 
-MTRK({
+module.exports = {
   cmd: "vvcmd",
   desc: "set vv emoji",
   fromMe: true,
