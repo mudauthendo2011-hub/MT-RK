@@ -22,7 +22,7 @@ const ffmpeg = require('fluent-ffmpeg');
 const http = require('http')
 
 module.exports = {
-    cmd: "ss",
+    name: "ss",
     desc: "screenshots a given url live page",
     fromMe: wtype,
     type: "utilities",
@@ -46,7 +46,7 @@ module.exports = {
 })
 
 module.exports = {
-    cmd: "sstab",
+    name: "sstab",
     desc: "screenshots a given url live page(tab view)",
     fromMe: wtype,
     type: "utilities",
@@ -70,7 +70,7 @@ module.exports = {
 })
 
 module.exports = {
-    cmd: "ssphone",
+    name: "ssphone",
     desc: "screenshots a given url live page(Mobile version)",
     fromMe: wtype,
     type: "utilities",
@@ -94,7 +94,7 @@ module.exports = {
 })
 
 module.exports = {
-    cmd: "ssfull",
+    name: "ssfull",
     desc: "screenshots a given url live page(full page version)",
     fromMe: wtype,
     type: "utilities",
@@ -118,7 +118,7 @@ module.exports = {
 })
 
 module.exports = {
-  cmd: "tts",
+  name: "tts",
   desc: "text to speech",
   fromMe: wtype,
   type: "utilities",
@@ -134,7 +134,7 @@ module.exports = {
 })
 
 module.exports = {
-cmd: "audio2text|text",
+name: "audio2text|text",
   desc: "convert audio or video to text",
   fromMe: wtype,
   type: "utilities",
@@ -153,7 +153,7 @@ cmd: "audio2text|text",
 })
 
 module.exports = {
-        cmd: "wm|walink",
+        name: "wm|walink",
         desc: "return walink of either replied/mention/chat user",
         fromMe: wtype,
         type: "utilities",
@@ -177,7 +177,7 @@ module.exports = {
 })
 
 module.exports = {
-cmd: "url|tourl|upload",
+name: "url|tourl|upload",
         desc: "uploads quoted media to Kord\'s Cdn and sends access url(safe)",
         fromMe: wtype,
         react: "🔗",
@@ -196,7 +196,7 @@ cmd: "url|tourl|upload",
 })
 
 module.exports = {
-cmd: "temp-url|temp-upload",
+name: "temp-url|temp-upload",
         desc: "uploads quoted media to Kord\'s Cdn and sends access url(temporarily)",
         fromMe: wtype,
         react: "♻️",
@@ -215,7 +215,7 @@ cmd: "temp-url|temp-upload",
 })
 
 module.exports = {
-cmd: "readmore",
+name: "readmore",
         desc: "adds readmore to given text",
         fromMe: wtype,
         type: "utilities",
@@ -235,7 +235,7 @@ cmd: "readmore",
 
 
 module.exports = {
-cmd: "define|whatis",
+name: "define|whatis",
         desc: "defines given text",
         react: "🧩",
         fromMe: wtype,
@@ -259,7 +259,7 @@ cmd: "define|whatis",
 })
 
 module.exports = {
-cmd: "weather",
+name: "weather",
         desc: "gives the weather information about given country",
         react: "🌦️",
         fromMe: wtype,
@@ -336,7 +336,7 @@ function getQ(q) {
 }
 
 module.exports = {
-  cmd: "vv",
+  name: "vv",
   desc: "resend a viewonce media as a normal media",
   fromMe: wtype,
   react: "🔓",
@@ -457,7 +457,7 @@ module.exports = {
 
 
 module.exports = {
-  cmd: "pdf",
+  name: "pdf",
   desc: "Converts image to PDF or text to PDF",
   fromMe: wtype,
   type: "utilities",
@@ -590,7 +590,7 @@ module.exports = {
 
 
 module.exports = {
-cmd: "calc|calculate",
+name: "calc|calculate",
   desc: "perform a calculation",
   fromMe: wtype,
   type: "utilities",
@@ -609,7 +609,7 @@ cmd: "calc|calculate",
 })
 
 module.exports = {
-    cmd: "trt|translate",
+    name: "trt|translate",
     desc: "translate text to english/given lang code",
     fromMe: wtype,
     type: "utilities",
@@ -641,7 +641,7 @@ module.exports = {
 })
 
 MTRK({
-cmd: "ngl",
+name: "ngl",
     desc: "send message to the ngl api (username and message)",
     fromMe: wtype,
     type: "utilities",
@@ -666,7 +666,7 @@ cmd: "ngl",
 })
 
 module.exports = {
-cmd: "ip|ipbot",
+name: "ip|ipbot",
     desc: "get ip for the bot",
     fromMe: wtype,
     type: "utilities",
@@ -694,7 +694,7 @@ cmd: "ip|ipbot",
 })
 
 module.exports = {
-cmd: "wiki",
+name: "wiki",
   desc: "search wiki",
   fromMe: wtype,
   type: "utilities",
@@ -712,7 +712,7 @@ cmd: "wiki",
 })
 
 module.exports = {
-cmd: "bible",
+name: "bible",
   desc: "get verse/verses from the bible",
   fromMe: wtype,
   type: "utilities",
@@ -730,7 +730,7 @@ cmd: "bible",
 })
 
 module.exports = {
-cmd: "font",
+name: "font",
   desc: "change font of text",
   fromMe: wtype,
   type: "utilities",
@@ -755,7 +755,7 @@ cmd: "font",
 })
 
 module.exports = {
-  cmd: "compress",
+  name: "compress",
   desc: "compress image/video",
   fromMe: wtype,
   type: "utilities",
@@ -811,7 +811,7 @@ module.exports = {
 
 
 module.exports = {
-cmd: 'getdevice|device',
+name: 'getdevice|device',
   desc: 'Get device of sender or quoted',
   fromMe: wtype,
   type: 'utilities'
