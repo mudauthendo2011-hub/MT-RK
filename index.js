@@ -37,4 +37,7 @@ if (!process.env.PM2_HOME && !process.env.STARTED_BY_NPM) {
   return
 }
 
+run()  return
+}
+
 run()
