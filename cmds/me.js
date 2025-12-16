@@ -518,7 +518,7 @@ kord({
 })
 
 kord({
-cmd: "owner",
+cmd: "owner|creater",
   desc: "sends owner contact",
   fromMe: wtype,
   type: "bot"
@@ -547,15 +547,20 @@ END:VCARD`
 
 kord({
 cmd: "whtsapp|discord|telegram|support",
-  desc: "send repository link of the bot",
+  desc: "send communits links of the MT-RK team",
   fromMe: wtype,
   type: "bot"
 }, async (m, text) => {
   try {
     const msg =
     `╔═════《 MT-RK OFFICIAL LINKS》════╗
-╠ Link: https://github.com/mudauthendo2011-hub/MT-RK
-╠ Description: WhatsApp Bot built with Baileys
+1.𝐖𝚮𝚫𝚻𝐒𝚫𝚸𝚸
+https://chat.whatsapp.com/HWZUVX4FmfYFHSBmFovMsI
+ 2.𝚻𝚵𝐋𝚵𝐆𝚪𝚫𝚳 
+https://t.me/MT_RK_offical_community
+
+3.𝐃𝚰𝐒𝐂𝚯𝚪𝐃
+https://discord.gg/aG7rbBTT
 ╚═════════════════════════════╝`
     
     return await m.send(msg)
