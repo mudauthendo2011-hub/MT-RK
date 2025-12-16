@@ -1,1 +1,117 @@
+MT-RK CUSTOM OPEN SOURCE LICENSE
+Version 1.0 – 2025
 
+Copyright (c) 2025 Mudau Thendo
+
+This License applies to the software project known as “MT-RK”, including
+all source code files, scripts, configuration files, documentation,
+examples, and any other associated materials (collectively referred to
+as the "Software").
+
+1. PERMISSION GRANT
+
+Permission is hereby granted, free of charge, to any person or organization
+obtaining a copy of this Software to use, copy, modify, merge, publish,
+and distribute the Software, subject to the terms and conditions of this
+License.
+
+This permission includes the right to:
+- Run the Software for personal, educational, or commercial purposes
+- Modify the source code to add features or fix bugs
+- Create forks or derivative works based on the Software
+- Redistribute original or modified versions of the Software
+
+2. CONDITIONS OF USE AND DISTRIBUTION
+
+Any redistribution of the Software, whether in original or modified form,
+must include:
+- This complete License text
+- Proper credit to the original author (Mudau Thendo)
+- A clear notice stating that the Software is based on or derived from MT-RK
+
+You may not remove, hide, or alter copyright notices, author credits,
+or license references contained within the Software.
+
+3. ATTRIBUTION REQUIREMENTS
+
+Any public use, hosting, or redistribution of the Software must clearly
+acknowledge the original project name “MT-RK” and its author. Attribution
+must be visible in at least one of the following:
+- Source code headers
+- Project documentation or README file
+- About, help, or information command within the bot
+
+4. COMMERCIAL USE
+
+Commercial use of the Software is permitted. This includes, but is not
+limited to:
+- Hosting the bot as a service
+- Integrating the Software into paid platforms
+- Offering customization or deployment services
+
+However, the original author shall not be held responsible for any revenue
+losses, legal issues, or damages arising from commercial use.
+
+5. NO AFFILIATION OR ENDORSEMENT
+
+Use of the Software does not imply any affiliation with or endorsement by
+the original author. You may not use the author’s name, project name,
+or branding to falsely suggest sponsorship or approval.
+
+6. DISCLAIMER OF WARRANTY
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE, RELIABILITY, SECURITY, OR NON-INFRINGEMENT.
+
+THE ENTIRE RISK AS TO THE QUALITY AND PERFORMANCE OF THE SOFTWARE IS WITH
+THE USER.
+
+7. LIMITATION OF LIABILITY
+
+IN NO EVENT SHALL THE AUTHOR OR COPYRIGHT HOLDER BE LIABLE FOR ANY CLAIM,
+DAMAGES, OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT,
+OR OTHERWISE, ARISING FROM, OUT OF, OR IN CONNECTION WITH THE SOFTWARE
+OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+THIS INCLUDES, BUT IS NOT LIMITED TO:
+- DATA LOSS
+- ACCOUNT BANS
+- SERVICE INTERRUPTIONS
+- SECURITY BREACHES
+- MISUSE OF THIRD-PARTY PLATFORMS
+
+8. THIRD-PARTY SERVICES AND PLATFORMS
+
+The Software may interact with third-party platforms such as WhatsApp or
+other messaging services. The author is not responsible for changes,
+restrictions, bans, or enforcement actions taken by these platforms.
+
+Users are solely responsible for complying with all applicable terms of
+service, laws, and regulations.
+
+9. TERMINATION
+
+Any violation of this License automatically terminates your rights under
+this License. Upon termination, you must immediately stop using and
+distributing the Software and destroy all copies in your possession.
+
+10. SEVERABILITY
+
+If any provision of this License is held to be invalid or unenforceable,
+the remaining provisions shall remain in full force and effect.
+
+11. GOVERNING LAW
+
+This License shall be governed and interpreted in accordance with the
+laws applicable in the author’s jurisdiction, without regard to conflict
+of law principles.
+
+12. FINAL STATEMENT
+
+By using, copying, modifying, or distributing the Software, you acknowledge
+that you have read, understood, and agreed to be bound by the terms of this
+License.
+
+This License represents the complete agreement regarding the Software and
+supersedes any prior agreements or understandings.
