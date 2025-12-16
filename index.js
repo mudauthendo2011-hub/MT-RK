@@ -1,4 +1,4 @@
-const { sock } = require("./core/sock")
+const sock = require("./core/sock")
 const { getPlatformInfo } = require("./core/dclient")
 const { spawn } = require("child_process")
 const http = require("http")
@@ -34,7 +34,11 @@ if (!process.env.PM2_HOME && !process.env.STARTED_BY_NPM) {
 
   pm2p.on("error", err => console.error("Failed to start PM2:", err))
   pm2p.on("exit", code => console.error("PM2 process exited with code:", code))
-  return
+
+  process.exit(0) // ✅ FIX
+}
+
+run()  return
 }
 
 run()  return
