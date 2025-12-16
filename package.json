@@ -1,0 +1,63 @@
+{
+  "name": "MT-RK",
+  "version": "2.0.0",
+  "description": "whatsapp bot made with baileys",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js",
+    "start": "FORCE_COLOR=1 npx pm2 start . --attach --name kord-v2 -- --color",
+    "build": "echo 'Not needed'",
+    "stop": "npx pm2 stop kord-ai"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mudauthendo2011-hub/MT-RK.git"
+  },
+  "keywords": [
+    "whatsapp-bot"
+  ],
+  "author": "Mudau",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mudauthendo2011-hub/MT-RK/issues"
+  },
+  "homepage": "https://github.com/mudauthendo2011-hub/MT-RK#readme",
+  "dependencies": {
+    "axios": "^0.27.2",
+    "baileys": "7.0.0-rc.9",
+    "chalk": "^4.1.2",
+    "cheerio": "^1.0.0-rc.10",
+    "child_process": "^1.0.2",
+    "chokidar": "^3.6.0",
+    "dotenv": "^16.0.2",
+    "express": "latest",
+    "file-type": "^16.5.3",
+    "fluent-ffmpeg": "^2.1.2",
+    "form-data": "^4.0.0",
+    "fs": "^0.0.1-security",
+    "g-i-s": "^2.1.7",
+    "jimp": "^1.6.0",
+    "link-preview-js": "^3.0.14",
+    "lodash.debounce": "^4.0.8",
+    "moment-timezone": "^0.5.34",
+    "mongoose": "^8.15.1",
+    "node-cache": "latest",
+    "node-cron": "^3.0.0",
+    "node-fetch": "^2.6.1",
+    "node-webpmux": "^3.1.1",
+    "os": "^0.1.2",
+    "path": "^0.12.7",
+    "pdfkit": "^0.17.1",
+    "pino": "^7.9.2",
+    "pm2": "^6.0.5",
+    "sequelize": "^6.21.4",
+    "sqlite": "5.1.1",
+    "sqlite3": "^5.0.11",
+    "uuid": "^11.1.0",
+    "wa-sticker-formatter": "^4.4.4",
+    "word-list": "^4.1.0",
+    "yarn": "^1.22.22",
+    "yt-search": "^2.11.1"
+  },
+  "packageManager": "yarn@1.22.22"
+}
