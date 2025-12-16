@@ -40,4 +40,10 @@ if (!process.env.PM2_HOME && !process.env.STARTED_BY_NPM) {
 run()  return
 }
 
+run()  return
+}
+
+run()  return
+}
+
 run()
